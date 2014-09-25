@@ -1,0 +1,93 @@
+/*
+ * VARS
+ */
+
+// sets the font size of img captions
+$img__caption-font-size: .75rem;
+
+// sets the bottom margin of images in text
+$imgtext__img-margin-bottom: 10px;
+
+// sets the bottom margin of images in columns
+$imgcol__img-margin-bottom: 15px;
+
+// sets the right margin of images in text
+$imgtext__img-margin-right: 20px;
+
+/*
+ * IMGTEXT
+ */
+
+.imgtext {
+  display: block;
+  clear: both;
+}
+
+.imgtext__img {
+  margin-bottom: $imgtext__img-margin-bottom;
+  img {
+    width: 100%;
+  }
+}
+
+.imgtext__caption {
+  font-size: $img__caption-font-size;
+}
+
+.imgtext__img--left {
+  margin-right: $imgtext__img-margin-right;
+  float: left;
+}
+
+.imgtext__img--linked {
+  padding-right: 8px;
+}
+
+.imgtext__img--full {}
+
+.imgtext__img--one-half {
+  width: 50%;
+}
+
+.imgtext__img--one-third {
+  width: 33%;
+}
+
+.imgtext__img--one-fifth {
+  width: 20%;
+}
+
+.imgtext__img--one-half,
+.imgtext__img--one-fifth,
+.imgtext__img--one-third,
+.imgtext__img--one-fifth {
+  margin-top: 3px;
+}
+
+.imgtext__text {}
+
+/*
+ * IMGCOL
+ */
+
+ .imgcol {
+   display: block;
+   clear: both;
+ }
+
+.imgcol__img {
+  box-sizing: border-box;
+  margin-bottom: $imgcol__img-margin-bottom;
+  img {
+    width: 100%;
+  }
+}
+
+.imgcol__img--half {
+  width: 50%;
+  float: left;
+}
+
+.imgcol__caption {
+  font-size: $img__caption-font-size;
+}
