@@ -83,6 +83,87 @@ tt_content.image.20.1.imageLinkWrap {
 tt_content.image.20.1.imageLinkWrap.height =
 tt_content.image.20.1.imageLinkWrap.width =
 
+# new classes for image-text in tag <figure> as in ADWD-1271
+tt_content.image.20 {
+
+	addClassesImage =
+	addClassesImage.override.cObject = CASE
+	addClassesImage.override.cObject {
+		key.field = imageorient
+		default = TEXT
+		default.value = imgtext__img imgtext__img--img--full imgtext__img--left
+		3 = TEXT
+		3.value = imgtext__img imgtext__img--img--full imgtext__img--left
+		4 = TEXT
+		4.value = imgtext__img imgtext__img--one-half imgtext__img--left
+		5 = TEXT
+		5.value = imgtext__img imgtext__img--one-third imgtext__img--left
+		6 = TEXT
+		6.value = imgtext__img imgtext__img--one-fifth imgtext__img--left
+	}
+
+# for each caption case: change the figure tag from <figure class="csc-textpic-image###CLASSES###"> to <figure class="###CLASSES###">
+	rendering {
+		singleNoCaption {
+			singleStdWrap {
+				wrap = <div class="csc-textpic-image###CLASSES###"> | </div>
+				wrap {
+					override = <figure class="###CLASSES###"> | </figure>
+					override {
+						if {
+							value = html5
+							equals.data = TSFE:config|config|doctype
+						}
+					}
+				}
+			}
+		}
+		noCaption {
+			# Multiple images and no caption at all
+			fallbackRendering < tt_content.image.20.rendering.singleNoCaption.fallbackRendering.10
+			allStdWrap.wrap = <div class="csc-textpic-imagewrap"> | </div>
+			singleStdWrap {
+				wrap = <div class="csc-textpic-image###CLASSES###"> | </div>
+				wrap {
+					override = <figure class="###CLASSES###"> | </figure>
+				}
+			}
+		}
+		singleCaption {
+			# Just one image with a caption
+			fallbackRendering < tt_content.image.20.rendering.singleNoCaption.fallbackRendering.10
+			singleStdWrap {
+				wrap = <div class="csc-textpic-image###CLASSES###"><table>###CAPTION###<tbody><tr><td> | </td></tr></tbody></table></div>
+				wrap {
+					override = <figure class="###CLASSES###">|###CAPTION###</figure>
+					override {
+						if {
+							value = html5
+							equals.data = TSFE:config|config|doctype
+						}
+					}
+				}
+			}
+		}
+		splitCaption {
+			fallbackRendering < tt_content.image.20.rendering.singleNoCaption.fallbackRendering.10
+			singleStdWrap {
+				wrap = <div class="csc-textpic-image###CLASSES###"><table>###CAPTION###<tbody><tr><td> | </td></tr></tbody></table></div>
+				wrap {
+					override = <figure class="###CLASSES###">|###CAPTION###</figure>
+					override {
+						if {
+							value = html5
+							equals.data = TSFE:config|config|doctype
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
 # fix image captions as in ADWD-1050
 plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE (
 	figcaption.csc-textpic-caption { display: block; padding: 10px 0; }
