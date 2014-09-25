@@ -1,0 +1,29 @@
+TCEFORM {
+	tt_content {
+		# content element layout disabled as in ADWD-1272
+		layout.disabled = 1
+		spaceBefore.disabled = 1
+		spaceAfter.disabled = 1
+		section_frame.disabled = 1
+
+		# Image Adjustment disabled as in ADWD-1273
+		imagewidth.disabled = 1
+		imageheight.disabled = 1
+		imageborder.disabled = 1
+		image_compression.disabled = 1
+		image_effects.disabled = 1
+
+		# image alignment as in ADWD-1271
+		imageorient {
+			removeItems = 0,1,2,8,9,10,17,18,25,26
+			#disableNoMatchingValueElement = 1
+			#If set, the element "CURRENT VALUE IS NOT AVAILABLE" will not be added to the list
+			addItems {
+				3 = Volle Breite
+				4 = Halbe Breite
+				5 = Ein Drittel
+				6 = Ein Fünftel
+			}
+		}
+	}
+}
