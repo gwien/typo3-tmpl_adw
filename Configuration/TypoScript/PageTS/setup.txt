@@ -27,3 +27,11 @@ TCEFORM {
 		}
 	}
 }
+
+# config RTE
+RTE {
+	# hide the image button in the RTE
+	config.tt_content.bodytext.types.textpic.hideButtons = image
+	# forbidden tags
+	default.proc.denyTags = img
+}
