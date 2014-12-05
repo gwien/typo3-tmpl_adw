@@ -1,0 +1,43 @@
+.xmlinclude {
+	.ds-simple-list {
+		@extend .list-group;
+		li {
+			@extend .list-group-item;
+		}
+	}
+	.ds-interactive-div {
+		display: none;
+	}
+	.ds-artifact-list {
+		list-style-type: none;
+		padding-left: 0;
+		.ds-artifact-item {
+			@extend .panel;
+			@extend .panel-default;
+			.item-wrapper {
+				@extend .panel-body;
+			}
+			.thumbnail-wrapper {
+				@extend .pull-right;
+			}
+		}
+	}
+	h1 {
+		font-size: $font-size-h3;
+	}
+	#aspect_artifactbrowser_CollectionViewer_div_collection-home {
+		display: none;
+	}
+	ul {
+		&.pagination-links {
+			@extend .pager;
+			margin: 0;
+			li {
+				& > a {
+					border-radius: $border-radius-small;
+					@extend .pull-left;
+				}
+			}
+		}
+	}
+}

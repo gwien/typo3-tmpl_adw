@@ -1,5 +1,7 @@
 @import 'compass/css3/images';
 @import 'compass/css3/hyphenation';
+@import 'bootstrap';
+
 @import '_Includes/Settings';
 @import '_Includes/h5bp';
 @import '_Includes/Base';
@@ -14,12 +16,14 @@
 @import '_Includes/_Extensions/News';
 @import '_Includes/_Extensions/Find';
 @import '_Includes/_Extensions/Bib';
+@import '_Includes/_Extensions/XmlInclude';
 @import '_Includes/Print';
 @import '_Includes/tool_mode';
 
 @import '_Includes/Fancybox';
 @import '_Includes/960';
 @import '_Includes/_FontAwesome/font-awesome';
+
 
 $fa-font-path: "../Fonts";
 
@@ -89,6 +93,8 @@ $fa-font-path: "../Fonts";
 	p.header_title {
 		color: #ca0030;
 		font: bold 16px / 1.2 Cambria, Georgia, serif;
+		margin-bottom: 0!important;
+		margin-top: 16px;
 	}
 	.subtitle {
 		color: #282828;
@@ -173,9 +179,9 @@ p {
 .teaser-head {
 	background: transparent url($image-path + "teaser-head-bg_mini.png") no-repeat;
 	padding: 15px 25px 40px;
-	width: 128px;
-	height: 137px;
+	width: 185px;
 	overflow: hidden;
+	height: 200px;
 	h2 {
 		padding: 0 0 10px 0;
 		font: italic normal 1em / 1 Georgia, serif !important;
