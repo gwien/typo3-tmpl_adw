@@ -40,4 +40,30 @@
 			}
 		}
 	}
+
+	#aspect_artifactbrowser_ItemViewer_div_item-view {
+		@extend .panel;
+		@extend .panel-default;
+		h1, h2, h3 {
+			@extend .panel-heading;
+		}
+		.item-summary-view-metadata {
+			div {
+				@extend .panel-body;
+			}
+		}
+		.file-list, .ds-referenceSet-list {
+			@extend .panel-body;
+		}
+		.file-list {
+			.simple-item-view-abstract {
+				@extend p;
+			}
+		}
+		.ds-referenceSet-list {
+			li {
+				margin: 0 0 0 22px;
+			}
+		}
+	}
 }
