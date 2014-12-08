@@ -92,4 +92,15 @@
 			}
 		}
 	}
+	.ds-static-div{
+		.pagination {
+			width: 100%;
+			.pagination-info {
+				@extend .pull-left;
+			}
+			.pagination-links {
+				@extend .pull-right;
+			}
+		}
+	}
 }
