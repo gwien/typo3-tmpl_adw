@@ -446,6 +446,15 @@ $textB: #555;
 			text-align: right;
 
 			.pager {
+				&:before {
+					display: inline-block;
+				}
+				li {
+					&>a {
+						border: none!important;
+						background-color: transparent!important;
+					}
+				}
 				color: $inactive;
 
 				.icon-right-dir:before,
@@ -527,4 +536,22 @@ $textB: #555;
 
 .tx_find .searchForm .fieldType-Range input {
 	width: 102px;
+}
+
+.tx_find {
+	.results {
+		.pager {
+			li {
+				& > a {
+					border: none !important;
+					background-color: transparent !important;
+				}
+			}
+			.next, .previous {
+				&>a {
+					float: none;
+				}
+			}
+		}
+	}
 }
