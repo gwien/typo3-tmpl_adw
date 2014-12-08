@@ -5,6 +5,11 @@
 			@extend .list-group-item;
 		}
 	}
+	h1 {
+		&.ds-div-head {
+			display: none;
+		}
+	}
 	.ds-interactive-div {
 		display: none;
 	}

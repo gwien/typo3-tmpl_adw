@@ -17,3 +17,7 @@ Resources/Private/Scss/_Includes/_FontAwesome/*
 .jruby
 Documentation/_make/build/
 *.iml
+
+package.json
+gulpfile.js
+node_modules
