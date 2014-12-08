@@ -42,22 +42,43 @@
 	}
 
 	#aspect_artifactbrowser_ItemViewer_div_item-view {
-		@extend .panel;
-		@extend .panel-default;
-		h1, h2, h3 {
-			@extend .panel-heading;
-		}
+
 		.item-summary-view-metadata {
+			@extend .panel;
+			@extend .panel-default;
+			h1, h2, h3 {
+				@extend .panel-heading;
+			}
 			div {
 				@extend .panel-body;
 			}
 		}
 		.file-list, .ds-referenceSet-list {
+			@extend .panel;
+			@extend .panel-default;
 			@extend .panel-body;
+
 		}
 		.file-list {
 			.simple-item-view-abstract {
 				@extend p;
+			}
+			.thumbnail-wrapper {
+				@extend .pull-right;
+			}
+			.file-link {
+				a {
+					&:before {
+						@extend .fa;
+						margin-right: 8px;
+					}
+					&.open {
+						@extend .fa-external-link;
+					}
+					&.download {
+						@extend .fa-download;
+					}
+				}
 			}
 		}
 		.ds-referenceSet-list {
