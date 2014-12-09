@@ -103,4 +103,8 @@
 			}
 		}
 	}
+	.ds-includeSet-table {
+		@extend .table;
+		@extend .panel;
+	}
 }
