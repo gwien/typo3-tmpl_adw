@@ -1,4 +1,9 @@
 .xmlinclude {
+	span {
+		&.bold {
+			font-weight: bold;
+		}
+	}
 	.ds-simple-list {
 		@extend .list-group;
 		li {
