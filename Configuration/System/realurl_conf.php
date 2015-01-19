@@ -103,6 +103,7 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = array(
 					)
 			),
 			'656' => 'xmlinclude',
+			'660' => 'xmlinclude',
 		)
 	),
 );
