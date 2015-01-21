@@ -42,7 +42,7 @@ $labelWidth: 120px;
 .tx_find {
 
 	.invisible {
-		line-height: 0px;
+		line-height: 0;
 	}
 
 	.fa {
@@ -58,7 +58,7 @@ $labelWidth: 120px;
 			.inputType-text {
 				width: 400px;
 				height: auto;
-				margin: 0px 6px 2px 0px;
+				margin: 0 6px 2px 0;
 				padding: 4px;
 				font-size: 100%;
 			}
@@ -509,7 +509,7 @@ section.map {
 			}
 			&.pointer-270 {
 				margin-top: -8px;
-				margin-left: 0px;
+				margin-left: 0;
 			}
 		}
 	}
@@ -517,7 +517,7 @@ section.map {
 	.detailsContainer {
 		position: absolute;
 		right: 0;
-		top: 0px;
+		top: 0;
 		height: 900px;
 		width: 500px;
 

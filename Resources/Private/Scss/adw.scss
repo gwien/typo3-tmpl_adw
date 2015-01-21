@@ -1,7 +1,4 @@
-@import 'compass/css3/images';
-@import 'compass/css3/hyphenation';
-@import 'bootstrap';
-
+@import '../../../Build/bower/bootstrap-sass-twbs/assets/stylesheets/bootstrap';
 @import '_Includes/Settings';
 @import '_Includes/h5bp';
 @import '_Includes/Base';
@@ -12,18 +9,15 @@
 @import '_Includes/_Extensions/WtDirectory';
 @import '_Includes/_Extensions/Solr';
 @import '_Includes/_Extensions/Pagebrowse';
-@import '_Includes/_Extensions/DSpaceConnect';
 @import '_Includes/_Extensions/News';
 @import '_Includes/_Extensions/Find';
 @import '_Includes/_Extensions/Bib';
 @import '_Includes/_Extensions/XmlInclude';
 @import '_Includes/Print';
 @import '_Includes/tool_mode';
-
 @import '_Includes/Fancybox';
 @import '_Includes/960';
-@import '_Includes/_FontAwesome/font-awesome';
-
+@import '../../../Build/bower/fontawesome/scss/font-awesome';
 
 $fa-font-path: "../Fonts";
 
@@ -93,7 +87,7 @@ $fa-font-path: "../Fonts";
 	p.header_title {
 		color: #ca0030;
 		font: bold 16px / 1.2 Cambria, Georgia, serif;
-		margin-bottom: 0!important;
+		margin-bottom: 0 !important;
 		margin-top: 16px;
 	}
 	.subtitle {
@@ -190,7 +184,6 @@ p {
 		text-align: center;
 	}
 	p {
-		font: italic normal 1em / 1 Georgia, serif !important;
 		letter-spacing: 0.01em;
 		margin: 0 !important;
 		text-align: center;
@@ -365,8 +358,8 @@ p {
 		font-size: 80%;
 	}
 	img {
-		margin: -2px 0px 0px 0px !important;
-		padding: none !important;
+		margin: -2px 0 0 0 !important;
+		padding: 0 !important;
 		-webkit-box-shadow: none !important;
 		-moz-box-shadow: none !important;
 		box-shadow: none !important;
@@ -377,12 +370,30 @@ p {
 	text-align: center;
 }
 
+@mixin word-wrap() {
+	-ms-word-break: break-all;
+	word-break: break-all;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+
+// Optional hyphenation
+@mixin hyphens($mode: auto) {
+	word-wrap: break-word;
+	-webkit-hyphens: $mode;
+	-moz-hyphens: $mode;
+	-ms-hyphens: $mode; // IE10+
+	-o-hyphens: $mode;
+	hyphens: $mode;
+}
+
 .align-justify {
-	@include word-break(break-word);
+	@include word-wrap();
 	@include hyphens(auto);
 	text-align: justify;
 }
 
 table {
-	font: 1em/22px Cambria,Georgia,serif;
+	font: 1em/22px Cambria, Georgia, serif;
 }

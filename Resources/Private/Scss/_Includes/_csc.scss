@@ -20,7 +20,7 @@ DIV.csc-textpic DIV.csc-textpic-imagecolumn {
 /* Border just around the image */
 DIV.csc-textpic-border DIV.csc-textpic-imagewrap .csc-textpic-image IMG, DIV.csc-textpic-border DIV.csc-textpic-single-image IMG {
 	border: 2px solid black;
-	padding: 0px 0px;
+	padding: 0;
 }
 
 DIV.csc-textpic-imagewrap {
@@ -146,11 +146,11 @@ DIV.csc-textpic DIV.csc-textpic-single-image IMG {
 
 /* No margins around the whole image-block */
 DIV.csc-textpic DIV.csc-textpic-imagewrap .csc-textpic-firstcol {
-	margin-left: 0px !important;
+	margin-left: 0 !important;
 }
 
 DIV.csc-textpic DIV.csc-textpic-imagewrap .csc-textpic-lastcol {
-	margin-right: 0px !important;
+	margin-right: 0 !important;
 }
 
 /* Add margin from image-block to text (in case of "Text w/ images") */
@@ -260,7 +260,6 @@ DIV.csc-textpic DIV.csc-textpic-imagerow-last {
 		margin: 22px 0;
 	}
 	li {
-		margin: 22px 0;
 		margin: 0;
 	}
 	address {

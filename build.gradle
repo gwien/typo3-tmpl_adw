@@ -1,153 +1,87 @@
+// Pull the plugin from Maven Central
+buildscript {
+	repositories {
+		mavenCentral()
+		maven { url 'http://dl.bintray.com/robfletcher/gradle-plugins' }
+		jcenter()
+	}
+	dependencies {
+		classpath 'be.filipblondeel.gradle:gradle-gulp-plugin:0.1'
+	}
+}
+
 loadConfiguration()
-def env = hasProperty('env') ? env : 'development'
 
 def loadConfiguration() {
-    def env = hasProperty('env') ? env : 'development'
- //   project.ext.set("environment", environment)
-    println "Building for $env environment"
-
-    defaultTasks = ['cleanUp', 'prepare', 'getFontAwesome', 'compileSass', 'combineJs']
-
-    if (env == 'production') {
-        defaultTasks.add('minifyJs')
-    }
+	defaultTasks = ['cleanUp', 'node', 'npmInstall', 'installGulp', 'gulp_compile', 'prepare']
 }
 
 // Invoke the plugin
-apply plugin: 'compass'
-apply plugin: 'js'
-apply plugin: 'css'
+apply plugin: 'gulp'
 
 project.ext.set("jsSrcDir", "Resources/Private/JavaScript")
 project.ext.set("jsDestDir", "Resources/Public/JavaScript")
 project.ext.set("cssSrcDir", "Resources/Public/Css")
 project.ext.set("cssSrcDir", "Resources/Public/Css")
 
+node {
+	// Version of node to use.
+	version = '0.10.35'
+
+	// Enabled the automatic download. False is the default (for now).
+	download = true
+}
+
 project.ext.set(
-        'libraryVersions', [
-        fontAwesome: '4.1.0'
+	'libraryVersions', [
+	fontAwesome: '4.2.0',
+	twbs       : '3.3.2'
 ])
 
 FileCollection buildDirectories = files([
-        'Build/logs',
-        'Build/lib',
-        'Build/pdepend',
-        'Build/tmp/FontAwesome'
+	'Build/logs',
+	'Build/lib',
+	'Build/pdepend',
+	'Build/tmp/FontAwesome',
+	'Build/tmp/twbs'
 ])
 
 FileCollection generatedFiles = files([
-        cssSrcDir + '/adw.css',
-        jsDestDir + '/production.js',
-        jsDestDir + '/production.min.js',
-        jsDestDir + '/production.sourcemap.json'
+	cssSrcDir + '/adw.css',
+	jsDestDir + '/production.js',
+	jsDestDir + '/production.min.js',
+	jsDestDir + '/production.sourcemap.json'
 ])
 
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '1.10'
+	gradleVersion = '2.2'
 }
 
-// Pull the plugin from Maven Central
-buildscript {
-    repositories {
-        mavenCentral()
-        maven { url 'http://dl.bintray.com/robfletcher/gradle-plugins' }
-    }
-    dependencies {
-        classpath 'org.gradle.plugins:gradle-compass:1.0.9'
-        classpath 'com.eriwen:gradle-js-plugin:1.9.0'
-        classpath 'com.eriwen:gradle-css-plugin:1.8.3'
-        classpath 'org.tomdz.maven:sphinx-maven-plugin:1.0.3'
-    }
-}
 
 repositories {
-    mavenCentral()
-}
-
-compass {
-    cssDir = file('Resources/Public/Css')
-    sassDir = file('Resources/Private/Scss')
-    fontsDir = file('Resources/Public/Fonts')
-    environment = env
-    debugInfo = (env == "development") ? true : false
-    noLineComments = (env == "production") ? true : false
-    outputStyle = (env == "production") ? "compressed" : "expanded"
-    trace = true
+	mavenCentral()
 }
 
 task cleanUp << {
-    description 'Cleanup build artifacts'
-    buildDirectories.each { File file ->
-        delete file
-    }
+	description 'Cleanup build artifacts'
+	buildDirectories.each { File file ->
+		delete file
+	}
 
-    generatedFiles.each { File file ->
-        delete file
-    }
+	generatedFiles.each { File file ->
+		delete file
+	}
 }
 
 task prepare << {
-    description 'Prepare for build'
+	description 'Prepare for build'
 
 
-    buildDirectories.each { File file ->
-        file.mkdirs()
-    }
+	buildDirectories.each { File file ->
+		file.mkdirs()
+	}
 }
 
-// Declare your sources
-javascript.source {
-    dev {
-        js {
-            srcDir jsSrcDir
-            include "*.js"
-            exclude "*.min.js"
-        }
-    }
-}
-
-css.source {
-    dev {
-        css {
-            srcDir cssSrcDir
-            include "*.css"
-            exclude "*.min.css"
-        }
-    }
-}
-
-combineJs {
-    source = javascript.source.dev.js.files
-    dest = file("Resources/Public/JavaScript/production.js")
-}
-
-minifyJs {
-    source = combineJs
-    dest = file("Resources/Public/JavaScript/production.min.js")
-    sourceMap = file("Resources/Public/JavaScript/production.sourcemap.json")
-    closure {
-        warningLevel = 'QUIET'
-    }
-}
-
-task getFontAwesome(dependsOn: prepare) << {
-    if (!file("Build/tmp/FontAwesome/font-awesome-' + libraryVersions.fontAwesome + '.zip'").exists()) {
-        ant.get(src: 'https://github.com/FortAwesome/Font-Awesome/archive/v' + libraryVersions.fontAwesome + '.zip',
-                dest: 'Build/tmp/FontAwesome/font-awesome-' + libraryVersions.fontAwesome + '.zip',
-                usetimestamp: true,
-                verbose: true)
-        ant.unzip(src: 'Build/tmp/FontAwesome/font-awesome-' + libraryVersions.fontAwesome + '.zip',
-                  dest: "Build/tmp/FontAwesome/")
-
-        copy {
-            from 'Build/tmp/FontAwesome/Font-Awesome-' + libraryVersions.fontAwesome + '/fonts'
-            into compass.fontsDir
-        }
-        copy {
-            from 'Build/tmp/FontAwesome/Font-Awesome-' + libraryVersions.fontAwesome + '/scss'
-            into 'Resources/Private/Scss/_Includes/_FontAwesome'
-            rename('font-awesome.scss', '_font-awesome.scss')
-        }
-    }
-}
+gulp_build.dependsOn 'installGulp'
+gulp_build.dependsOn 'npmInstall'

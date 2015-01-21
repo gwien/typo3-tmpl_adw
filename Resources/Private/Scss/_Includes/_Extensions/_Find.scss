@@ -92,9 +92,7 @@ $textB: #555;
 
 			input {
 				padding: 2px;
-				border-color: #C90230;
-				border-style: solid;
-				border-width: 1px;
+				border: 1px solid #C90230;
 				color: $textA;
 				background: $backgroundA;
 			}
@@ -117,7 +115,7 @@ $textB: #555;
 			input {
 				width: 100%;
 				height: 30px;
-				margin: 0px 6px 2px 0px;
+				margin: 0 6px 2px 0;
 				padding: 4px;
 				font-size: 100%;
 			}
@@ -139,7 +137,7 @@ $textB: #555;
 		}
 
 		.controls {
-			bottom: 0px;
+			bottom: 0;
 		}
 
 		.fieldType-search input:-moz-placeholder {
@@ -166,7 +164,7 @@ $textB: #555;
 		}
 
 		.submit:active {
-			background-image: url(Images/button_shade_large_click.png);
+			background-image: url(../Images/button_shade_large_click.png);
 			background-color: $backgroundBActive;
 		}
 
@@ -369,10 +367,10 @@ $textB: #555;
 			li {
 				display: inline-block;
 				margin: 0;
-				border: 0px none;
+				border: 0 none;
 
 				a {
-					padding: 0.1em 0.5em 0em 0.5em;
+					padding: 0.1em 0.5em 0 0.5em;
 					display: inline-block;
 				}
 			}
@@ -478,7 +476,7 @@ $textB: #555;
 	.detail {
 		h1 {
 			margin-bottom: 1em;
-			margin-left: 0px;
+			margin-left: 0;
 		}
 	}
 

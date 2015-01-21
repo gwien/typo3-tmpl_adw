@@ -3,11 +3,10 @@
 }
 
 .tool-mode__pagenav ul {
-	margin-top: 0px;
+	margin-top: 0;
 	padding: 15px 15px 0 15px;
 	position: absolute;
 	z-index: 9999;
-	background-color: green;
 	display: none;
 	background-color: white;
 	border: 1px solid $link-color;
@@ -19,13 +18,13 @@
 		}
 		list-style-type: none;
 		padding-bottom: 10px;
-		border-bottom: 1px solid #AAAAAA;
+		border-bottom: 1px solid #aaaaaa;
 		margin: 0;
 		margin-bottom: 10px;
 	}
 	li:last-child {
 		border-bottom: none;
-		padding-bottom: none;
+		padding-bottom: 0;
 	}
 }
 
