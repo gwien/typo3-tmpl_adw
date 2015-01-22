@@ -4,8 +4,8 @@ $formLabelWidth: 200px;
 
 .ui-menu-item {
 	list-style-type: none;
-	padding-left: 0px;
-	margin-left: 0px;
+	padding-left: 0;
+	margin-left: 0;
 	color: $link-color-dark;
 	background-color: rgba(255, 255, 255, 0.9);
 	a {
@@ -19,8 +19,8 @@ $formLabelWidth: 200px;
 	}
 }
 .ui-autocomplete {
-	padding-left: 0px;
-	margin-left: 0px;
+	padding-left: 0;
+	margin-left: 0;
 	width: 300px;
 	border: $button-border;
 }
@@ -274,7 +274,6 @@ $formLabelWidth: 200px;
 		background-color: $button-background-light;
 		padding: 5px;
 		margin-bottom:5px;
-		#display: block;
 		margin-top: 5px;
 	}
 
@@ -317,7 +316,7 @@ $formLabelWidth: 200px;
 		border: $button-border;
 		padding:4px 11px;
 		margin: -1px;
-		font-family:Arial;
+		font-family:Arial, "sans-serif";
 		font-size:16px;
 		cursor: pointer;
 		width: 49%;

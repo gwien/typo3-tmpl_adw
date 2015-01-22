@@ -5,6 +5,8 @@ Build/logs
 Build/pdepend
 Build/lib
 Build/tmp
+Build/bower
+Build/jquery
 Resources/Public/JavaScript/production*.js*
 Resources/Public/Css/adw.css
 Resources/Public/Css/germania-sacra.css
@@ -18,6 +20,5 @@ Resources/Private/Scss/_Includes/_FontAwesome/*
 Documentation/_make/build/
 *.iml
 
-package.json
-gulpfile.js
 node_modules
+bower_components

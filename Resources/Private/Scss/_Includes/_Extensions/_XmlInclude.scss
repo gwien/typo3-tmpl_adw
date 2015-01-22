@@ -43,7 +43,7 @@
 			@extend .pager;
 			margin: 0;
 			li {
-				& > a {
+				&> a {
 					border-radius: $border-radius-small;
 					@extend .pull-left;
 				}
@@ -63,11 +63,11 @@
 				@extend .panel-body;
 			}
 		}
-		.file-list, .ds-referenceSet-list {
+		.file-list,
+		.ds-referenceSet-list {
 			@extend .panel;
 			@extend .panel-default;
 			@extend .panel-body;
-
 		}
 		.file-list {
 			.simple-item-view-abstract {
@@ -97,7 +97,7 @@
 			}
 		}
 	}
-	.ds-static-div{
+	.ds-static-div {
 		.pagination {
 			width: 100%;
 			.pagination-info {
@@ -108,6 +108,7 @@
 			}
 		}
 	}
+
 	.ds-includeSet-table {
 		@extend .table;
 		@extend .panel;
