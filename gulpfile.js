@@ -28,7 +28,7 @@ gulp.task('sass', function () {
 gulp.task('lint', function () {
 	gulp.src(paths.sass)
 		.pipe(scsslint({
-			'config': 'scss-lint.yml',
+			'config': 'Build/scss-lint.yml',
 			'maxBuffer': 9999999
 		}))
 });
