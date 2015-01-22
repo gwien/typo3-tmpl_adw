@@ -21,3 +21,4 @@ Administrator Handbuch
 
     	Template/Index
     	Benutzer/Index
+    	ResDoctae/Index

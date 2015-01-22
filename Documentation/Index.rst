@@ -51,6 +51,7 @@ AdW Handbuch
 	Panoramaviewer/Index
 	Onlinebibliographie/Index
 	Personendatenbank/Index
+	Admin/Index
 
 
 
