@@ -48,10 +48,12 @@ wird "Include XML" ausgewählt. Die Start URL ist im Format
 
 	http://rep.adw-goe.de/handle/11858/00-001S-0000-0023-9538-D?MINXML&locale-attribute=en
 
-anzugeben, der :code:`Teil handle/11858/00-001S-0000-0023-9538-D` ist die entsprechende TeilURL der einzubindenenden Sammlung aus res doctae.
+anzugeben, der Teil :code:`handle/11858/00-001S-0000-0023-9538-D` ist die entsprechende TeilURL der einzubindenenden Sammlung aus res doctae.
 
 Als Base URL ist
 
 ::
 
 	http://rep.adw-goe.de/
+	
+einzutragen.
