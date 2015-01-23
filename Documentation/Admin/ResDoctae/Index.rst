@@ -41,7 +41,7 @@ In dem erstellten Template klickt man auf "Setup" und fügt die Zeilen ein:
 Erstellung Seiteninhaltselement
 -------------------------------
 
-Um den Inhalt einer res doctae URL darzustellen, muss ein Inhaltselement vom Typen Plugin erstellt werden, Als Plugin
+Um den Inhalt einer res doctae URL darzustellen, muss ein Inhaltselement vom Typen Plugin erstellt werden. Als Plugin
 wird "Include XML" ausgewählt. Die Start URL ist im Format 
 
 ::
