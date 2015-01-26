@@ -1,0 +1,16 @@
+{namespace s=Subugoe\Find\ViewHelpers}
+<h1>{document.article-id} {document.article-title}</h1>
+<section class="general">
+	<span class="author">
+		{document.author}, S. {document.page-from} - {document.page-to}
+	</span>
+	{document.content -> f:format.html()}
+</section>
+<section class="literature">
+	<f:if condition="{document.literature}">
+		<h1>Literatur</h1>
+		<f:for each="{document.literature}" as="literature">
+			<p>{literature -> f:format.html()}</p>
+		</f:for>
+	</f:if>
+</section>

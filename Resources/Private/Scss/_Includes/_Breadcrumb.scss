@@ -7,11 +7,13 @@
 		width: 840px;
 		overflow: hidden;
 	}
+
 	li {
 		float: left;
 		overflow: hidden;
 		font-size: 0.813em;
 	}
+
 	h2 {
 		float: left;
 		overflow: hidden;
@@ -23,6 +25,7 @@
 		padding: 0 10px;
 		text-align: right;
 	}
+
 	a {
 		background: $link-color url($image-path + "breadcrumb-sprite.png") no-repeat 0 -39px;
 		color: #fff;
@@ -33,9 +36,13 @@
 		margin: 0 -4px 0 0;
 		padding: 0 10px 0 25px;
 		text-decoration: none;
-		&:hover, &:active, &:focus {
+
+		&:hover,
+		&:active,
+		&:focus {
 			text-decoration: underline;
 		}
+
 	}
 	li {
 		&.first a {
@@ -43,15 +50,19 @@
 			font-weight: bold;
 			height: 39px;
 			padding: 8px 10px 8px 15px;
+
 			img {
 				margin-top: -20px;
 			}
+
 		}
+
 		&.cur a {
 			background: $link-color url($image-path + "breadcrumb-sprite.png") no-repeat 0 -78px;
 			padding: 0 5px 0 25px;
 		}
 	}
+
 	&:after {
 		content: url($image-path + "breadcrumb-end.png");
 		display: block;

@@ -4,18 +4,20 @@
 
 .tool-mode__pagenav ul {
 	margin-top: 0;
-	padding: 15px 15px 0 15px;
+	padding: 15px 15px 0;
 	position: absolute;
 	z-index: 9999;
 	display: none;
 	background-color: white;
 	border: 1px solid $link-color;
 	border-top: none;
+
 	li {
 		a {
 			color: #282828;
 			display: block;
 		}
+
 		list-style-type: none;
 		padding-bottom: 10px;
 		border-bottom: 1px solid #aaaaaa;
@@ -38,7 +40,7 @@
 	height: 39px;
 	vertical-align: middle;
 	background: none;
-	border: none;
+	border: 0;
 }
 
 .tool-mode .content .csc-default:first-child h2 {
