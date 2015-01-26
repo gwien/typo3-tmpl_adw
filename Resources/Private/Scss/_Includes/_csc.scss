@@ -18,7 +18,8 @@ DIV.csc-textpic DIV.csc-textpic-imagecolumn {
 }
 
 /* Border just around the image */
-DIV.csc-textpic-border DIV.csc-textpic-imagewrap .csc-textpic-image IMG, DIV.csc-textpic-border DIV.csc-textpic-single-image IMG {
+DIV.csc-textpic-border DIV.csc-textpic-imagewrap .csc-textpic-image IMG,
+DIV.csc-textpic-border DIV.csc-textpic-single-image IMG {
 	border: 2px solid black;
 	padding: 0;
 }
@@ -28,7 +29,7 @@ DIV.csc-textpic-imagewrap {
 }
 
 DIV.csc-textpic IMG {
-	border: none;
+	border: 0;
 }
 
 /* DIV: This will place the images side by side */
@@ -63,7 +64,7 @@ DIV.csc-textpic DIV.csc-textpic-imagewrap DL.csc-textpic-image DD {
 }
 
 DIV.csc-textpic DIV.csc-textpic-imagewrap DL.csc-textpic-image DD IMG {
-	border: none;
+	border: 0;
 }
 
 /* FE-Editing Icons */

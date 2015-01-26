@@ -1,6 +1,7 @@
 @import '../../../Build/bower/bootstrap-sass-twbs/assets/stylesheets/bootstrap';
 @import '_Includes/Settings';
 @import '_Includes/h5bp';
+@import '../../../Build/bower/html5-boilerplate/css/main.css';
 @import '_Includes/Base';
 @import '_Includes/csc';
 @import '_Includes/Breadcrumb';
@@ -12,6 +13,7 @@
 @import '_Includes/_Extensions/News';
 @import '_Includes/_Extensions/Find';
 @import '_Includes/_Extensions/Bib';
+@import '_Includes/_Extensions/_Projects/resikom';
 @import '_Includes/_Extensions/XmlInclude';
 @import '_Includes/Print';
 @import '_Includes/tool_mode';
@@ -20,8 +22,6 @@
 @import '../../../Build/bower/fontawesome/scss/font-awesome';
 
 $fa-font-path: "../Fonts";
-
-/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
 
 .top-container {
 	background-color: $link-color;

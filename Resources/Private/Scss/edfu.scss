@@ -117,7 +117,7 @@ $labelWidth: 120px;
 	.transliteration,
 	.field-weiteres,
 	.field-translit input {
-		font-family: TransliterationFont;
+		font-family: TransliterationFont sans-serif;
 	}
 
 	ol.resultList {
@@ -499,18 +499,22 @@ section.map {
 				margin-top: 0;
 				margin-left: -5px;
 			}
+
 			&.pointer-90 {
 				margin-top: -8px;
 				margin-left: -10px;
 			}
+
 			&.pointer-180 {
 				margin-top: -10px;
 				margin-left: -10px;
 			}
+
 			&.pointer-270 {
 				margin-top: -8px;
 				margin-left: 0;
 			}
+
 		}
 	}
 

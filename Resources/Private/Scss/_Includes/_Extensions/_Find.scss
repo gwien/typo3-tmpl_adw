@@ -1,12 +1,12 @@
 $current: #000;
 $inactive: #bbb;
-$textInverted: #fff;
-$backgroundActive: #eef;
+$text-inverted: #fff;
+$background-active: #eef;
 $highlight: #FDEE53;
 $highlightBorder: #b00;
 $downlight: #666;
-$downlightInverted: #ddd;
-$tabSelected: #263476;
+$downlight-inverted: #ddd;
+$tab-selected: #263476;
 
 // form borders
 $borderA1: #b3b3b3;
@@ -207,7 +207,7 @@ $textB: #555;
 
 		.sortOrder, .resultCountPicker {
 			float: right;
-			margin: 5px 0 0 0.5em;
+			margin: 5px 0 0 .5em;
 
 			label {
 				width: auto;
@@ -253,7 +253,7 @@ $textB: #555;
 		p {
 			margin: 11px 0;
 			i {
-				font-size: 0.8rem;
+				font-size: .8rem;
 			}
 		}
 	}
@@ -280,7 +280,7 @@ $textB: #555;
 		}
 
 		ol.autocomplete {
-			margin: 0.5em 0 0 0;
+			margin: .5em 0 0 0;
 		}
 
 		.facetList li {
@@ -308,18 +308,18 @@ $textB: #555;
 		.facetList .facetActive {
 			padding: 0;
 			text-indent: 0;
-			margin-bottom: 0.25em;
+			margin-bottom: .25em;
 		}
 
 		.facetActive {
 			a {
-				padding-left: 0.2em;
+				padding-left: .2em;
 				color: black;
 			}
 
 			a:before {
-				margin-right: 0.3em;
-				margin-left: 0.1em;
+				margin-right: .3em;
+				margin-left: .1em;
 			}
 		}
 
@@ -335,7 +335,7 @@ $textB: #555;
 		}
 
 		.facetHistogram-container .facetActive {
-			margin-bottom: 0.5em;
+			margin-bottom: .5em;
 		}
 
 		.histogram {
@@ -370,7 +370,7 @@ $textB: #555;
 				border: 0 none;
 
 				a {
-					padding: 0.1em 0.5em 0 0.5em;
+					padding: .1em .5em 0 .5em;
 					display: inline-block;
 				}
 			}
@@ -378,10 +378,10 @@ $textB: #555;
 			li.facetActive {
 				@extend li;
 				background-color: #C90230;
-				color: $textInverted;
+				color: $text-inverted;
 
 				.facetCount {
-					color: $downlightInverted;
+					color: $downlight-inverted;
 				}
 			}
 		}
@@ -390,8 +390,8 @@ $textB: #555;
 	/* page browser list view */
 	.listPager {
 		text-align: center;
-		margin-top: 0.5em;
-		margin-bottom: 0.5em;
+		margin-top: .5em;
+		margin-bottom: .5em;
 
 		* {
 			margin: 0;
@@ -406,7 +406,7 @@ $textB: #555;
 				display: inline;
 
 				a {
-					padding: 0.4em;
+					padding: .4em;
 				}
 			}
 		}
@@ -419,14 +419,16 @@ $textB: #555;
 		.resultCount {
 			margin-bottom: 2em;
 		}
+
 	}
 
 	/* result count */
 	.resultCount {
 		text-align: right;
-		margin-top: 0.5em;
-		margin-bottom: 0.5em;
+		margin-top: .5em;
+		margin-bottom: .5em;
 	}
+
 	.noResult {
 		text-align: left;
 	}
@@ -444,16 +446,18 @@ $textB: #555;
 			text-align: right;
 
 			.pager {
+				color: $inactive;
+
 				&:before {
 					display: inline-block;
 				}
+
 				li {
 					&>a {
 						border: none!important;
 						background-color: transparent!important;
 					}
 				}
-				color: $inactive;
 
 				.icon-right-dir:before,
 				.icon-left-dir:before {
@@ -489,32 +493,38 @@ $textB: #555;
 	}
 
 	dd {
-		margin: 0.2em 0 1em 2em;
+		margin: .2em 0 1em 2em;
+
 		ul {
 			margin: 0;
 		}
 	}
+
 	#tx_find-histogram-tooltip {
 		display: none;
 		position: absolute;
 		background: #fff;
 	}
+
 	.ui-helper-hidden-accessible {
 		display: none;
 	}
+
 	.person {
 		section {
 			ol {
 				margin: 0;
 			}
 		}
+
 		nav {
 			&.aemter {
 				ol {
 					li {
-						margin-right: 0.3rem;
+						margin-right: .3rem;
 					}
 				}
+
 			}
 		}
 	}
@@ -545,11 +555,14 @@ $textB: #555;
 					background-color: transparent !important;
 				}
 			}
-			.next, .previous {
+
+			.next,
+			.previous {
 				&>a {
 					float: none;
 				}
 			}
+
 		}
 	}
 }
