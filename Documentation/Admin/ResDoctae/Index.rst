@@ -36,6 +36,8 @@ In dem erstellten Template klickt man auf "Setup" und fügt die Zeilen ein:
 	[global]
 
 	plugin.tx_xmlinclude.settings.showDebugInformation = 0
+	
+Beim Tab "Enthält" bei "Statische Templates einschließen (aus Erweiterungen):" noch "xmlincludes Settings (xmlinclude)" auswählen.
 
 
 Erstellung Seiteninhaltselement
