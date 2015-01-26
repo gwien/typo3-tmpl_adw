@@ -8,7 +8,7 @@
 
 .. _slider:
 
-7 Slieder mit Bildern
+7 Slider mit Bildern
 =====================
 Das Plug-In für den Slider ist umfangreicher und beinhaltet weitere Möglichkeiten, als bisher bei der AdW-Seite eingesetzt. Hier wird lediglich der verwendete Slider beschrieben. Für weitere Informationen bitte im Handbuch zum Slider allgemein nachschlagen (https://adw-goe.de/typo3conf/ext/t3s_jslidernews_/doc/manual.sxw).
 
