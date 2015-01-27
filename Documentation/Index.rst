@@ -52,7 +52,7 @@ AdW Handbuch
 	Onlinebibliographie/Index
 	Personendatenbank/Index
 	Admin/Index
-
+	StyleGuideline/Index
 
 
 **Inhalt Style Guideline**
