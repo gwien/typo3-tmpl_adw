@@ -113,6 +113,7 @@ plugin.tx_find {
 
 		# Configure custom CSS, JavaScript and localisation resources.
 		CSSPaths {
+			10 >
 			50 >
 			70 >
 		}
