@@ -50,9 +50,7 @@ $adw-red: #c90230;
 		}
 
 		.controls {
-			position: absolute;
-			bottom: 4px;
-			left: 670px;
+			position: relative;
 		}
 	}
 
@@ -98,7 +96,8 @@ $adw-red: #c90230;
 		float: left;
 		width: 660px;
 		margin: 0;
-
+		padding: 0;
+		list-style-position: inside;
 		li {
 			position: relative;
 			clear: right;
