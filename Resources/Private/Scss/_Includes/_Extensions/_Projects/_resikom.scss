@@ -121,11 +121,6 @@ $adw-red: #c90230;
 					margin-left: 1em;
 					font-size: 75%;
 				}
-
-				.field-beziehung {
-					font-size: 75%;
-					color: #666;
-				}
 			}
 
 			p {
@@ -382,13 +377,13 @@ section.map {
 
 	.tx-felogin-pi1 {
 		form {
-		div {
-			@extend .form-group;
-			input {
-				@extend .form-control;
+			div {
+				@extend .form-group;
+				input {
+					@extend .form-control;
+				}
 			}
 		}
-		}
 	}
-
 }
+
