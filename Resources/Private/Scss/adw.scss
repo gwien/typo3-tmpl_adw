@@ -1,7 +1,6 @@
 @import '../../../Build/bower/bootstrap-sass-twbs/assets/stylesheets/bootstrap';
 @import '_Includes/Settings';
 @import '_Includes/h5bp';
-@import '../../../Build/bower/html5-boilerplate/css/main.css';
 @import '_Includes/Base';
 @import '_Includes/csc';
 @import '_Includes/Breadcrumb';
@@ -44,14 +43,17 @@ $fa-font-path: "../Fonts";
 	position: relative;
 }
 
+$search-gradient-start: #ac001e;
+$search-gradient-end: #a20019;
+
 .search {
 	background-color: $link-color;
-	background: url($image-path + "search-devider.png"), -moz-linear-gradient(top, $link-color 0%, #ac001e 95%, #a20019 100%);
-	background: url($image-path + "search-devider.png"), -webkit-gradient(linear, left top, left bottom, color-stop(0%, $link-color), color-stop(95%, #ac001e), color-stop(100%, #a20019));
-	background: url($image-path + "search-devider.png"), -webkit-linear-gradient(top, $link-color 0%, #ac001e 95%, #a20019 100%);
-	background: url($image-path + "search-devider.png"), -o-linear-gradient(top, $link-color 0%, #ac001e 95%, #a20019 100%);
-	background: url($image-path + "search-devider.png"), -ms-linear-gradient(top, $link-color 0%, #ac001e 95%, #a20019 100%);
-	background: url($image-path + "search-devider.png"), linear-gradient(to bottom, $link-color 0%, #ac001e 95%, #a20019 100%);
+	background: url($image-path + "search-devider.png"), -moz-linear-gradient(top, $link-color 0%, $search-gradient-start 95%, $search-gradient-end 100%);
+	background: url($image-path + "search-devider.png"), -webkit-gradient(linear, left top, left bottom, color-stop(0%, $link-color), color-stop(95%, $search-gradient-end), color-stop(100%, $search-gradient-end));
+	background: url($image-path + "search-devider.png"), -webkit-linear-gradient(top, $link-color 0%, $search-gradient-start 95%, $search-gradient-end 100%);
+	background: url($image-path + "search-devider.png"), -o-linear-gradient(top, $link-color 0%, $search-gradient-start 95%, $search-gradient-end 100%);
+	background: url($image-path + "search-devider.png"), -ms-linear-gradient(top, $link-color 0%, $search-gradient-start 95%, $search-gradient-end 100%);
+	background: url($image-path + "search-devider.png"), linear-gradient(to bottom, $link-color 0%, $search-gradient-start 95%, $search-gradient-end 100%);
 	background-repeat: no-repeat;
 	background-position: 0 50%;
 	height: 39px;

@@ -1,6 +1,8 @@
 {namespace s=Subugoe\Find\ViewHelpers}
-<h1>{document.article-title}</h1>
-<div>
+<div class="panel-heading">
+	<h1>{document.article-title}</h1>
+</div>
+<div class="panel-body">
 	<f:format.crop maxCharacters="200">{document.content -> f:format.raw()}</f:format.crop>
 	<p>
 	<f:link.action
