@@ -9,7 +9,8 @@ var gulp = require('gulp'),
 
 var paths = {
 	sass: ['./Resources/Private/Scss/**/*.scss', '!./Resources/Private/Scss/vendors/**/*.scss'],
-	fonts: ['./Build/bower/fontawesome/fonts/*']
+	fonts: ['./Build/bower/fontawesome/fonts/*'],
+	polymer: ['./Build/bower/polymer/*']
 };
 
 gulp.task('sass', function () {
@@ -34,7 +35,7 @@ gulp.task('lint', function () {
 });
 
 gulp.task('compile', function () {
-	gulp.start('bower', 'copyfonts', 'sass', 'uglify')
+	gulp.start('bower', 'copyfonts', 'copy-polymer', 'sass', 'uglify')
 });
 
 gulp.task('watch', function () {
@@ -58,6 +59,12 @@ gulp.task('copyfonts', function () {
 	return gulp.src(paths.fonts)
 		.pipe(gulp.dest('Resources/Public/Fonts/'));
 });
+
+gulp.task('copy-polymer', function () {
+	return gulp.src(paths.polymer)
+		.pipe(gulp.dest('Resources/Public/JavaScript/Polymer/'));
+});
+
 
 gulp.task('default', function () {
 	gulp.start('lint', 'compile', 'watch')

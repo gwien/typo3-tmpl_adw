@@ -1,0 +1,12 @@
+{
+    "name": "subugoe/tmpl-adw",
+    "type": "typo3-cms-extension",
+    "description": "Template for ADW Website",
+    "homepage": "http://adw-goe.de",
+    "license": ["GPL-2.0+"],
+    "keywords": ["TYPO3 CMS", "sub"],
+    "support": {
+        "issues": "https://github.com/subugoe/typo3-tmpl_adw/issues"
+    },
+    "version": "3.2.0"
+}
