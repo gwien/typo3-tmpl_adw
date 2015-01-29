@@ -24,4 +24,7 @@
 	<article class="detail {document.fields.type}" id="c{config.uid}-record-{document.fields.id}">
 		<f:render partial="Resikom/Detail/{document.fields.type}" arguments="{_all}"/>
 	</article>
+	<aside class="sidebar">
+		<f:render partial="Resikom/Detail/{document.fields.type}-sidebar" arguments="{_all}"/>
+	</aside>
 </f:section>

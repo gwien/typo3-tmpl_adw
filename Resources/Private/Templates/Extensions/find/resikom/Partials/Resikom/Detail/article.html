@@ -6,6 +6,16 @@
 	</span>
 	{document.content -> f:format.raw()}
 </section>
+<section class="sources">
+	<f:if condition="{document.sources}">
+		<h1><f:link.page additionalAttributes="{data-toggle: 'collapse'}" section="sources-{document.id}">Quellen</f:link.page></h1>
+		<f:for each="{document.sources}" as="source">
+			<div class="collapse" id="sources-{document.id}">
+				<p>{source -> f:format.raw()}</p>
+			</div>
+		</f:for>
+	</f:if>
+</section>
 <section class="literature">
 	<f:if condition="{document.literature}">
 		<h1><f:link.page additionalAttributes="{data-toggle: 'collapse'}" section="literature-{document.id}">Literatur</f:link.page></h1>

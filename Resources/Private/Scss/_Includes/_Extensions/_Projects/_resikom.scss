@@ -112,7 +112,8 @@ $adw-red: #c90230;
 		}
 	}
 
-	.literature {
+	.literature,
+	.sources {
 		@extend .panel;
 		@extend .panel-default;
 
@@ -292,6 +293,11 @@ $adw-red: #c90230;
 	article {
 		&.detail {
 			@include make-lg-column(8);
+		}
+	}
+	aside {
+		&.sidebar {
+			@include make-lg-column(4);
 		}
 	}
 
