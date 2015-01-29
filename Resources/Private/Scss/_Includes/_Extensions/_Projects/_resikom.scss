@@ -29,9 +29,11 @@ $adw-red: #c90230;
 				@extend h2;
 				display: block;
 			}
+
 			&.p {
 				@extend p;
 			}
+
 			&.italic {
 				font-style: italic;
 			}
@@ -125,8 +127,8 @@ $adw-red: #c90230;
 			}
 
 			h1 {
-				font-size: 133%;
-				text-transform: capitalize;
+				font-size: 1.3em;
+				margin: 0;
 				.technical {
 					position: relative;
 					float: right;
@@ -140,16 +142,17 @@ $adw-red: #c90230;
 			}
 
 			.details {
-				color: #999;
-
 				&:before {
 					margin-right: 0;
 					font-size: 80%;
 				}
+				&:hover {
+					color: $adw-red;
+
+				}
 			}
 
 			a:hover .details {
-				color: $adw-red;
 			}
 
 			.removeRecord {
@@ -194,7 +197,7 @@ $adw-red: #c90230;
 
 	.imageControls {
 		display: none;
-		margin: 0 auto 1em auto;
+		margin: 0 auto 1em;
 		text-align: center;
 
 		.control-container {
@@ -238,7 +241,7 @@ $adw-red: #c90230;
 
 			.fotorama__thumb-border {
 				margin-top: 2px;
-				padding-right: 1px
+				padding-right: 1px;
 			}
 
 			.fotorama__html {
@@ -382,17 +385,6 @@ section.map {
 					&.active {
 						opacity: 1;
 					}
-				}
-			}
-		}
-	}
-
-	.tx-felogin-pi1 {
-		form {
-			div {
-				@extend .form-group;
-				input {
-					@extend .form-control;
 				}
 			}
 		}

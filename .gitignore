@@ -22,3 +22,5 @@ Documentation/_make/build/
 
 node_modules
 bower_components
+Resources/Public/JavaScript/Polymer
+!Resources/Public/JavaScript/Polymer/.gitkeep

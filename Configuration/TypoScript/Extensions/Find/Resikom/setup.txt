@@ -19,7 +19,7 @@ plugin.tx_find {
 			path = /solr/resikom
 
 			# Use a long 10 second timeout for Solr queries.
-			timeout = 10
+			timeout = 20
 		}
 		defaultQuery = *:*
 		# Add a filter query to not return documents of type »gott« or »ort«
@@ -73,11 +73,19 @@ plugin.tx_find {
 				facetQuery {
 					10 {
 						id = handbuch1
-						query = type:article
+						query = book:I
 					}
 					20 {
-						id = image
-						query = type:image
+						id = handbuch2
+						query = book:II
+					}
+					30 {
+						id = handbuch3
+						query = book:III
+					}
+					40 {
+						id = handbuch4
+						query = book:IV
 					}
 				}
 			}

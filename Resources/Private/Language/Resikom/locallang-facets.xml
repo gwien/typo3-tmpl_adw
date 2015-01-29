@@ -15,46 +15,19 @@
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index="facet.typ">Type</label>
-			<label index="facet.typ.formular">Text</label>
-			<label index="facet.typ.gott">God</label>
-			<label index="facet.typ.ort">Location</label>
-			<label index="facet.typ.wort">Word</label>
-			<label index="facet.typ.all">Alle</label>
-
-			<label index="facet.band">Found in Chassinat Volume</label>
-			<label index="facet.band.1">I</label>
-			<label index="facet.band.2">II</label>
-			<label index="facet.band.3">III</label>
-			<label index="facet.band.4">IV</label>
-			<label index="facet.band.5">V</label>
-			<label index="facet.band.6">VI</label>
-			<label index="facet.band.7">VII</label>
-			<label index="facet.band.8">VIII</label>
-
-			<label index="facet.tempel">Temple</label>
+			<label index="facet.typ.handbuch1">Handbuch 1</label>
+			<label index="facet.typ.handbuch2">Handbuch 2</label>
+			<label index="facet.typ.handbuch3">Handbuch 3</label>
+			<label index="facet.typ.handbuch4">Handbuch 4</label>
 
 		</languageKey>
 
 		<languageKey index="de" type="array">
 			<label index="facet.typ">Typ</label>
-			<label index="facet.typ.formular">Formular</label>
-			<label index="facet.typ.gott">Gott</label>
-			<label index="facet.typ.ort">Ort</label>
-			<label index="facet.typ.wort">Wort</label>
-			<label index="facet.typ.all">Alle</label>
-
-			<label index="facet.band">Gefundene Belege in Chassinat Band</label>
-			<label index="facet.band.1">I</label>
-			<label index="facet.band.2">II</label>
-			<label index="facet.band.3">III</label>
-			<label index="facet.band.4">IV</label>
-			<label index="facet.band.5">V</label>
-			<label index="facet.band.6">VI</label>
-			<label index="facet.band.7">VII</label>
-			<label index="facet.band.8">VIII</label>
-
-			<label index="facet.tempel">Tempel</label>
-
+			<label index="facet.typ.handbuch1">Handbuch 1</label>
+			<label index="facet.typ.handbuch2">Handbuch 2</label>
+			<label index="facet.typ.handbuch3">Handbuch 3</label>
+			<label index="facet.typ.handbuch4">Handbuch 4</label>
 		</languageKey>
 	</data>
 </T3locallang>
