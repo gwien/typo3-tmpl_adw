@@ -64,7 +64,7 @@ plugin.tx_find {
 				id = id
 				excludeOwnFilter = 1
 				type = Tabs
-				field = type
+				field = book
 				hidden = 0
 
 				selectedByDefault {

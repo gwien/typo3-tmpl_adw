@@ -75,11 +75,13 @@ $adw-red: #c90230;
 	}
 
 	.facet-type-Tabs ol li.facetActive {
-		background: $adw-red;
+		background: $adw-red!important;
 	}
 
 	.facetCount {
 		@extend .badge;
+		background-color: #fff;
+		color: #666!important;
 	}
 
 	.searchNote {
@@ -111,7 +113,14 @@ $adw-red: #c90230;
 			}
 		}
 	}
-
+	.listPager {
+		li {
+			a {
+				background: transparent;
+				border: 0;
+			}
+		}
+	}
 	.literature,
 	.sources {
 		@extend .panel;
