@@ -37,6 +37,11 @@ $adw-red: #c90230;
 			&.italic {
 				font-style: italic;
 			}
+
+			&.smallCaps {
+				font-variant: small-caps;
+				letter-spacing: 0.08em;
+			}
 		}
 	}
 	form {
