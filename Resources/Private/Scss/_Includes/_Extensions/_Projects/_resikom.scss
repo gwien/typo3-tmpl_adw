@@ -23,7 +23,20 @@ $adw-red: #c90230;
 	}
 
 	$label-width: 120px;
-
+	.detail {
+		span {
+			&.head {
+				@extend h2;
+				display: block;
+			}
+			&.p {
+				@extend p;
+			}
+			&.italic {
+				font-style: italic;
+			}
+		}
+	}
 	form {
 		.fieldContainer {
 			.fieldLabel {
