@@ -8,7 +8,7 @@
 </section>
 <section class="literature">
 	<f:if condition="{document.literature}">
-		<h1><a data-toggle="collapse" href="#literature-{document.id}">Literatur</a></h1>
+		<h1><f:link.page additionalAttributes="{data-toggle: 'collapse'}" section="literature-{document.id}">Literatur</f:link.page></h1>
 		<f:for each="{document.literature}" as="literature">
 			<div class="collapse" id="literature-{document.id}">
 				<p>{literature -> f:format.raw()}</p>

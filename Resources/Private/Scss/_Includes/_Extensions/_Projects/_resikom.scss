@@ -289,6 +289,12 @@ $adw-red: #c90230;
 		}
 	}
 
+	article {
+		&.detail {
+			@include make-lg-column(8);
+		}
+	}
+
 	article.fields {
 		padding-top: 1em;
 
