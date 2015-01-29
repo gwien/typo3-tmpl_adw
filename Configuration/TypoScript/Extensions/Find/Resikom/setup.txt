@@ -128,7 +128,8 @@ plugin.tx_find {
 
 		JSPaths {
 			10 = EXT:tmpl_adw/Resources/Public/JavaScript/find.js
-			50 = EXT:tmpl_adw/Resources/Public/JavaScript/Resikom.js
+			20 = EXT:tmpl_adw/Resources/Public/JavaScript/bootstrap.min.js
+			50 = EXT:tmpl_adw/Resources/Public/JavaScript/Find/Resikom.js
 		}
 
 		#languageRootPath = EXT:find/Projects/edfu/Language/

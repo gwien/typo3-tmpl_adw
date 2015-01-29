@@ -112,6 +112,21 @@ $adw-red: #c90230;
 		}
 	}
 
+	.literature {
+		@extend .panel;
+		@extend .panel-default;
+
+		h1 {
+			@extend .panel-heading;
+			@extend .panel-title;
+			margin-bottom: 0;
+		}
+
+		p {
+			@extend .panel-body;
+		}
+	}
+
 	ol.resultList {
 		float: left;
 		width: 660px;

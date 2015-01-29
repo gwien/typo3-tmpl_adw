@@ -10,7 +10,8 @@ var gulp = require('gulp'),
 var paths = {
 	sass: ['./Resources/Private/Scss/**/*.scss', '!./Resources/Private/Scss/vendors/**/*.scss'],
 	fonts: ['./Build/bower/fontawesome/fonts/*'],
-	polymer: ['./Build/bower/polymer/*']
+	polymer: ['./Build/bower/polymer/*'],
+	bootstrap: ['./Build/bower/bootstrap-sass-twbs/assets/']
 };
 
 gulp.task('sass', function () {
@@ -35,7 +36,7 @@ gulp.task('lint', function () {
 });
 
 gulp.task('compile', function () {
-	gulp.start('bower', 'copyfonts', 'copy-polymer', 'sass', 'uglify')
+	gulp.start('bower', 'copy-fonts', 'copy-bootstrap-js', 'copy-polymer', 'sass', 'uglify')
 });
 
 gulp.task('watch', function () {
@@ -55,7 +56,12 @@ gulp.task('uglify', function () {
 		.pipe(gulp.dest('Resources/Public/JavaScript/'))
 });
 
-gulp.task('copyfonts', function () {
+gulp.task('copy-bootstrap-js', function() {
+	return gulp.src(paths.bootstrap + 'javascripts/bootstrap.min.js')
+		.pipe(gulp.dest('Resources/Public/JavaScript/'));
+});
+
+gulp.task('copy-fonts', function () {
 	return gulp.src(paths.fonts)
 		.pipe(gulp.dest('Resources/Public/Fonts/'));
 });
