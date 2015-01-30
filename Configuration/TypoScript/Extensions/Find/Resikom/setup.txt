@@ -65,7 +65,7 @@ plugin.tx_find {
 				excludeOwnFilter = 1
 				type = Tabs
 				field = book
-				hidden = 0
+				hidden = 1
 
 				selectedByDefault {
 					handbuch1 = 1
@@ -89,10 +89,11 @@ plugin.tx_find {
 					}
 				}
 			}
-			# There are 8 Chassinat volumes, show all of them.
-			20 >
-			# In case documents on other temples than Edfu are included,
-			# add a facet with the temple name.
+			20 {
+				id = author
+				field = author
+				sortOrder = index
+			}
 			30 >
 			40 >
 			50 >
