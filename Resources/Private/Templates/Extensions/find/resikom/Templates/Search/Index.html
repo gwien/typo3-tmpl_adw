@@ -53,14 +53,14 @@
 			</section>
 	</div>
 	<div class="grid_16">
-		<div class="grid_12 alpha">
+		<div class="grid_11">
 			<ol id="c{config.uid}-resultList" class="resultList" start="{config.counterStart}">
 				<f:for each="{results.documents}" as="document">
 					<f:render partial="Resikom/Result" arguments="{_all}"/>
 				</f:for>
 			</ol>
 		</div>
-		<div class="grid_4 omega">
+		<div class="grid_5">
 			<f:render partial="Facets/Facets" arguments="{_all}"/>
 		</div>
 	</div>

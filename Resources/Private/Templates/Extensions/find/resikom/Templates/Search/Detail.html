@@ -22,9 +22,9 @@
 	<f:render partial="Components/DetailResultPager" arguments="{_all}"/>
 
 	<article class="detail {document.fields.type}" id="c{config.uid}-record-{document.fields.id}">
-		<f:render partial="Resikom/Detail/{document.fields.type}" arguments="{_all}"/>
+		<f:render partial="Resikom/Detail/book-{document.fields.book}" arguments="{_all}"/>
 	</article>
 	<aside class="sidebar">
-		<f:render partial="Resikom/Detail/{document.fields.type}-sidebar" arguments="{_all}"/>
+		<f:render partial="Resikom/Detail/book-{document.fields.book}-sidebar" arguments="{_all}"/>
 	</aside>
 </f:section>

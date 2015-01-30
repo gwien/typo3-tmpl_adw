@@ -5,6 +5,7 @@ $more: '\2026'; /* … */
 $adw-red: #c90230;
 
 .tx-find-resikom {
+
 	.dashbefore {
 		&:before {
 			content: $dash;
@@ -153,8 +154,6 @@ $adw-red: #c90230;
 	}
 
 	ol.resultList {
-		float: left;
-		width: 660px;
 		margin: 0;
 		padding: 0;
 		list-style-position: inside;
@@ -316,12 +315,12 @@ $adw-red: #c90230;
 
 	article {
 		&.detail {
-			@include make-lg-column(8);
+			@include make-lg-column(11);
 		}
 	}
 	aside {
 		&.sidebar {
-			@include make-lg-column(4);
+			@include make-lg-column(5);
 		}
 	}
 
