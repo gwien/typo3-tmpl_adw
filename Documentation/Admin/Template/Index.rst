@@ -7,8 +7,8 @@
 
 .. _admin_template:
 
-Template für Seiten einrichten
-==============================
+12.1 Template für Seiten einrichten
+===================================
 Um die folgenden Einstellungen vorzunehmen, benötigt man einen Admin-Account. Sie beziehen sich größtenteils auf Konfigurationen im Template einer Seite.
 
 Knoten-Punkt anlegen

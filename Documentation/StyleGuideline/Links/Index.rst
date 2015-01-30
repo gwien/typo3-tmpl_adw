@@ -8,8 +8,8 @@
 
 .. _links:
 
-Links
-=====
+11.3 Links
+==========
 
 Externe Links
 -------------

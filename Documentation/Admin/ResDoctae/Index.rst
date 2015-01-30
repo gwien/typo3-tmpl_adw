@@ -7,8 +7,8 @@
 
 .. _admin_template:
 
-Einbindung res doctae
-=====================
+12.3 Einbindung res doctae
+==========================
 
 Um die folgenden Einstellungen vorzunehmen, benötigt man einen Admin-Account. Sie beziehen sich größtenteils auf Konfigurationen im Template einer Seite.
 
