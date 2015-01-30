@@ -9,12 +9,12 @@
 	facet configuration for this use case.
 </f:comment>
 <div role="tabpanel">
-	<ol class="facetTabs nav nav-tabs" role="tablist">
+	<ol class="facetTabs">
 		<f:for each="{facetData.values}" as="itemCount" key="facetTerm" iteration="iterator">
 			<li class="{f:if(
 				condition:'{s:find.facetIsActive(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets)}',
 				then:'facetActive active'
-			)}" role="tab" data-toggle="tab">
+			)}">
 				<f:link.action
 					addQueryString="TRUE"
 					argumentsToBeExcludedFromQueryString="{s:find.facetLinkArguments(facetID:facetInfo.id, activeFacets:config.activeFacets, mode:'remove')}"
