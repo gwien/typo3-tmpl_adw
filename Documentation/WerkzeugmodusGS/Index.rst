@@ -42,7 +42,7 @@ Anlegen von neuen Datensätzen
 
 Einzelne Datensätze
 ###################
-Wenn nur einzelne Datensätze angelegt werden sollen, kann das über das FE erfolgen. Dabei ist eine Voraussetzung, dass man Redakteurin/Redakteur im BE eingeloggt ist und die Seite im FE mit https aufruft (https://adw-goe.de/index.php?id=588). 
+Wenn nur einzelne Datensätze angelegt werden sollen, kann das über das FE erfolgen. Dabei ist eine Voraussetzung, dass man als Redakteurin/Redakteur im BE eingeloggt ist und die Seite im FE mit https aufruft (https://adw-goe.de/index.php?id=588). 
 
 Import von mehreren Datensätzen im BibTeX Format
 ################################################
