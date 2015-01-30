@@ -18,6 +18,7 @@ Resources/Private/Scss/_Includes/_FontAwesome/*
 .idea
 .jruby
 Documentation/_make/build/
+Documentation/index.rst
 *.iml
 
 node_modules
