@@ -17,7 +17,7 @@
 		<languageKey index="default" type="array">
 			<label index="button.empty">Suchfelder leeren</label>
 			<label index="input.default">All Fields</label>
-			<label index="input.default.placeholder">e.g.: Egmont</label>
+			<label index="input.default.placeholder">e.g.: Egmond</label>
 			<label index="input.raw">Solr Abfrage</label>
 			<label index="input.sort">Sort By</label>
 			<label index="input.sort-default">Default</label>
@@ -33,7 +33,7 @@
 
 		<languageKey index="de" type="array">
 			<label index="input.default">Alle Felder</label>
-			<label index="input.default.placeholder">z.B. Egmont</label>
+			<label index="input.default.placeholder">z.B. Egmond</label>
 			<label index="input.raw">Solr Abfrage</label>
 			<label index="input.sort">Sortierung</label>
 			<label index="input.sort-default">Standard</label>

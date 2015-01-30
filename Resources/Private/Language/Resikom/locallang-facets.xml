@@ -15,19 +15,19 @@
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index="facet.typ">Type</label>
-			<label index="facet.typ.handbuch1">Handbuch 1</label>
-			<label index="facet.typ.handbuch2">Handbuch 2</label>
-			<label index="facet.typ.handbuch3">Handbuch 3</label>
-			<label index="facet.typ.handbuch4">Handbuch 4</label>
+			<label index="facet.id.handbuch1">Handbuch I</label>
+			<label index="facet.id.handbuch2">Handbuch II</label>
+			<label index="facet.id.handbuch3">Handbuch III</label>
+			<label index="facet.id.handbuch4">Handbuch IV</label>
 
 		</languageKey>
 
 		<languageKey index="de" type="array">
 			<label index="facet.typ">Typ</label>
-			<label index="facet.typ.handbuch1">Handbuch 1</label>
-			<label index="facet.typ.handbuch2">Handbuch 2</label>
-			<label index="facet.typ.handbuch3">Handbuch 3</label>
-			<label index="facet.typ.handbuch4">Handbuch 4</label>
+			<label index="facet.id.handbuch1">Handbuch I</label>
+			<label index="facet.id.handbuch2">Handbuch II</label>
+			<label index="facet.id.handbuch3">Handbuch III</label>
+			<label index="facet.id.handbuch4">Handbuch IV</label>
 		</languageKey>
 	</data>
 </T3locallang>

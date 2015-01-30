@@ -26,12 +26,24 @@ $adw-red: #c90230;
 	.detail {
 		span {
 			&.head {
+				padding: 0.5em 1em 0.5em 0.2em;
+				display: inline-block;
+			}
+
+			&.head1 {
+				@extend h1;
+				background: $adw-red;
+				color: #fff;
+			}
+
+			&.head2 {
 				@extend h2;
-				display: block;
+				background: #fff;
 			}
 
 			&.p {
 				@extend p;
+				display: block;
 			}
 
 			&.italic {
@@ -75,7 +87,10 @@ $adw-red: #c90230;
 	}
 
 	.facet-type-Tabs ol li.facetActive {
-		background: $adw-red!important;
+		background: $adw-red;
+		a {
+			color: #fff;
+		}
 	}
 
 	.facetCount {
