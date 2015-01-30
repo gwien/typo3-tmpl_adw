@@ -17,29 +17,123 @@
 @import '_Includes/Print';
 @import '_Includes/tool_mode';
 @import '_Includes/Fancybox';
-@import '_Includes/960';
 @import '../../../Build/bower/fontawesome/scss/font-awesome';
 
 $fa-font-path: "../Fonts";
 
 .top-container {
+	@extend .container-fluid;
 	background-color: $link-color;
-	background: -moz-linear-gradient(top, $link-color 0%, #ac001e 95%, #a20019 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $link-color), color-stop(95%, #ac001e), color-stop(100%, #a20019));
-	background: -webkit-linear-gradient(top, $link-color 0%, #ac001e 95%, #a20019 100%);
-	background: -o-linear-gradient(top, $link-color 0%, #ac001e 95%, #a20019 100%);
-	background: -ms-linear-gradient(top, $link-color 0%, #ac001e 95%, #a20019 100%);
 	background: linear-gradient(top, $link-color 0%, #ac001e 95%, #a20019 100%);
 	height: 39px;
 }
 
-.main {
+body {
 	background: #f9f9f5 url($image-path + "noise1.png") repeat;
+}
+
+.main {
+	@extend .container;
 	min-height: 100%;
+	max-width: 970px;
 }
 
 .container_16 {
-	position: relative;
+	@include make-grid-columns(16);
+	@include make-lg-column(16);
+	@include make-md-column(16);
+	@include make-row();
+}
+
+.grid_16 {
+	@include make-lg-column(16);
+	@include make-md-column(16);
+}
+
+.grid_15 {
+	@include make-lg-column(15);
+	@include make-md-column(15);
+}
+
+.grid_14 {
+	@include make-lg-column(14);
+	@include make-md-column(14);
+}
+
+.grid_13 {
+	@include make-lg-column(13);
+	@include make-md-column(13);
+}
+
+.grid_12 {
+	@include make-lg-column(12);
+	@include make-md-column(12);
+}
+
+.grid_11 {
+	@include make-lg-column(11);
+	@include make-md-column(11);
+}
+
+.grid_10 {
+	@include make-lg-column(10);
+	@include make-md-column(10);
+}
+
+.grid_9 {
+	@include make-lg-column(9);
+	@include make-md-column(9);
+	@include make-sm-column(9);
+}
+
+.grid_8 {
+	@include make-lg-column(8);
+	@include make-md-column(8);
+}
+
+.grid_7 {
+	@include make-lg-column(7);
+	@include make-md-column(7);
+}
+
+.grid_6 {
+	@include make-lg-column(6);
+	@include make-md-column(6);
+}
+
+.grid_5 {
+	@include make-lg-column(5);
+	@include make-md-column(5);
+}
+
+.grid_4 {
+	@include make-lg-column(4);
+	@include make-md-column(4);
+	@include make-sm-column(4);
+}
+
+.grid_3 {
+	@include make-lg-column(3);
+	@include make-md-column(3);
+	@include make-sm-column(3);
+}
+
+.grid_2 {
+	@include make-lg-column(2);
+	@include make-md-column(2);
+	@include make-sm-column(2);
+	@include make-xs-column(3);
+}
+
+.header {
+	.logo,
+	.teaser-head {
+		@extend .hidden-xs;
+	}
+}
+
+.logo_dini {
+	@extend .hidden-xs;
 }
 
 $search-gradient-start: #ac001e;
@@ -47,11 +141,6 @@ $search-gradient-end: #a20019;
 
 .search {
 	background-color: $link-color;
-	background: url($image-path + "search-devider.png"), -moz-linear-gradient(top, $link-color 0%, $search-gradient-start 95%, $search-gradient-end 100%);
-	background: url($image-path + "search-devider.png"), -webkit-gradient(linear, left top, left bottom, color-stop(0%, $link-color), color-stop(95%, $search-gradient-end), color-stop(100%, $search-gradient-end));
-	background: url($image-path + "search-devider.png"), -webkit-linear-gradient(top, $link-color 0%, $search-gradient-start 95%, $search-gradient-end 100%);
-	background: url($image-path + "search-devider.png"), -o-linear-gradient(top, $link-color 0%, $search-gradient-start 95%, $search-gradient-end 100%);
-	background: url($image-path + "search-devider.png"), -ms-linear-gradient(top, $link-color 0%, $search-gradient-start 95%, $search-gradient-end 100%);
 	background: url($image-path + "search-devider.png"), linear-gradient(to bottom, $link-color 0%, $search-gradient-start 95%, $search-gradient-end 100%);
 	background-repeat: no-repeat;
 	background-position: 0 50%;

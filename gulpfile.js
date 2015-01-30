@@ -5,30 +5,49 @@ var gulp = require('gulp'),
 	concat = require('gulp-concat'),
 	uglify = require('gulp-uglify'),
 	rename = require('gulp-rename'),
+	autoprefixer = require('gulp-autoprefixer'),
 	bower = require('gulp-bower');
 
-var paths = {
-	sass: ['./Resources/Private/Scss/**/*.scss', '!./Resources/Private/Scss/vendors/**/*.scss'],
-	fonts: ['./Build/bower/fontawesome/fonts/*'],
-	polymer: ['./Build/bower/polymer/*'],
-	bootstrap: ['./Build/bower/bootstrap-sass-twbs/assets/']
+var config = {
+	paths: {
+		sass: ['./Resources/Private/Scss/**/*.scss', './Resources/Private/Scss/*.scss', '!./Resources/Private/Scss/vendors/**/*.scss'],
+		fonts: ['./Build/bower/fontawesome/fonts/*'],
+		polymer: ['./Build/bower/polymer/*'],
+		bootstrap: ['./Build/bower/bootstrap-sass-twbs/assets/']
+	},
+	autoprefixer: {
+		browsers: [
+			'last 2 versions',
+			'safari 5',
+			'ie 8',
+			'ie 9',
+			'opera 12.1',
+			'ios 6',
+			'android 4'
+		],
+		cascade: true
+	}
 };
 
 gulp.task('sass', function () {
-	gulp.src(paths.sass)
+	gulp.src(config.paths.sass)
 		.pipe(sass({
 			style: 'compressed',
-			errLogToConsole: true
+			errLogToConsole: true,
+			sourcemaps: true
 		}))
 		.on('error', notify.onError({
 			title: 'Sass Error',
 			message: '<%= error.message %>'
 		}))
+		.pipe(autoprefixer(
+			config.autoprefixer
+		))
 		.pipe(gulp.dest('./Resources/Public/Css/'))
 });
 
 gulp.task('lint', function () {
-	gulp.src(paths.sass)
+	gulp.src(config.paths.sass)
 		.pipe(scsslint({
 			'config': 'Build/scss-lint.yml',
 			'maxBuffer': 9999999
@@ -40,7 +59,7 @@ gulp.task('compile', function () {
 });
 
 gulp.task('watch', function () {
-	gulp.watch(paths.sass, ['lint', 'compile'])
+	gulp.watch(config.paths.sass, ['lint', 'compile'])
 });
 
 gulp.task('bower', function () {
@@ -56,18 +75,18 @@ gulp.task('uglify', function () {
 		.pipe(gulp.dest('Resources/Public/JavaScript/'))
 });
 
-gulp.task('copy-bootstrap-js', function() {
-	return gulp.src(paths.bootstrap + 'javascripts/bootstrap.min.js')
+gulp.task('copy-bootstrap-js', function () {
+	return gulp.src(config.paths.bootstrap + 'javascripts/bootstrap.min.js')
 		.pipe(gulp.dest('Resources/Public/JavaScript/'));
 });
 
 gulp.task('copy-fonts', function () {
-	return gulp.src(paths.fonts)
+	return gulp.src(config.paths.fonts)
 		.pipe(gulp.dest('Resources/Public/Fonts/'));
 });
 
 gulp.task('copy-polymer', function () {
-	return gulp.src(paths.polymer)
+	return gulp.src(config.paths.polymer)
 		.pipe(gulp.dest('Resources/Public/JavaScript/Polymer/'));
 });
 

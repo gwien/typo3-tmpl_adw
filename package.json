@@ -14,7 +14,9 @@
     "gulp-watch": "^3.0.0",
     "sass": "^0.5.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-autoprefixer": "^2.1.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/subugoe/typo3-tmpl_adw.git"
