@@ -6,6 +6,14 @@ $adw-red: #c90230;
 
 .tx-find-resikom {
 
+	section {
+		&.facets {
+			.facetCount {
+				display: inline;
+			}
+		}
+	}
+
 	.dashbefore {
 		&:before {
 			content: $dash;

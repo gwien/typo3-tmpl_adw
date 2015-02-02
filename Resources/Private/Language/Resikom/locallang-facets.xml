@@ -15,6 +15,7 @@
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index="facet.typ">Type</label>
+			<label index="facet.author">Author</label>
 			<label index="facet.id.handbuch1">Handbuch I</label>
 			<label index="facet.id.handbuch2">Handbuch II</label>
 			<label index="facet.id.handbuch3">Handbuch III</label>
@@ -24,6 +25,7 @@
 
 		<languageKey index="de" type="array">
 			<label index="facet.typ">Typ</label>
+			<label index="facet.author">Autor</label>
 			<label index="facet.id.handbuch1">Handbuch I</label>
 			<label index="facet.id.handbuch2">Handbuch II</label>
 			<label index="facet.id.handbuch3">Handbuch III</label>
