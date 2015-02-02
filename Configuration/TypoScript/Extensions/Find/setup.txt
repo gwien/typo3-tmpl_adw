@@ -93,6 +93,7 @@ plugin.tx_find {
 	view {
 		templateRootPath = EXT:tmpl_adw/Resources/Private/Templates/Extensions/find/germaniasacra/Templates/
 		partialRootPath = EXT:tmpl_adw/Resources/Private/Templates/Extensions/find/germaniasacra/Partials/
+		layoutRootPath = EXT:tmpl_adw/Resources/Private/Templates/Extensions/find/germaniasacra/Layouts/
 	}
 	felogin < plugin.tx_felogin_pi1
 	felogin {
