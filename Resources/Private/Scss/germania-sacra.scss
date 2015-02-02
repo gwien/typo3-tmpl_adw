@@ -8,11 +8,13 @@ $formLabelWidth: 200px;
 	margin-left: 0;
 	color: $link-color-dark;
 	background-color: rgba(255, 255, 255, 0.9);
+
 	a {
 		text-decoration: none;
 		width: 100%;
 		cursor: pointer;
 	}
+
 	a:hover {
 		color: $link-color-light;
 		background-color: $button-background-dark;
@@ -72,6 +74,7 @@ $formLabelWidth: 200px;
 			.inputContainer {
 				margin-left: $formLabelWidth + 5px;
 			}
+
 			.alternate {
 				margin-left: $formLabelWidth + 5px;
 			}
@@ -94,14 +97,18 @@ $formLabelWidth: 200px;
 				left: 0;
 				right: $mapRight;
 			}
+
 		}
+
 		.downloadLinks {
 			float: left;
 			margin: 20px 0;
+
 			ul, li {
 				display: inline;
 				padding: 0;
 			}
+
 			.formatName {
 				text-transform: uppercase;
 			}
@@ -113,9 +120,11 @@ $formLabelWidth: 200px;
 			h2 {
 				font-size: 1rem !important;
 			}
+
 			.main > p {
 				margin-top: 0 !important;
 			}
+
 		}
 		section {
 			margin-bottom: 1em;
@@ -168,12 +177,15 @@ $formLabelWidth: 200px;
 					li {
 						display: inline;
 						list-style-type: none;
+
 						:after {
 							content: ', ';
 						}
+
 						:last-of-type:after {
 							content: '';
 						}
+
 					}
 				}
 			}
@@ -218,6 +230,7 @@ $formLabelWidth: 200px;
 			&:before {
 				content: '(';
 			}
+
 			&:after {
 				content: ')';
 			}
@@ -255,15 +268,18 @@ $formLabelWidth: 200px;
 			color: $link-color-dark;
 			font-weight: normal;
 		}
+
 		td {
 			padding-right: 5px;
 			padding-top: 5px;
 			line-height: 1.2;
 			min-width: 5em;
 		}
+
 		h3 {
 			line-height: 1.2;
 		}
+
 	}
 
 	.leafletMap_reset-view {
@@ -363,6 +379,7 @@ $formLabelWidth: 200px;
 		z-index: 3;
 		color: rgba(241, 128, 23, 0.6);
 	}
+
 	.person {
 		ol,
 		h3 {

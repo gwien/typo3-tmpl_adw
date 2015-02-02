@@ -39,7 +39,7 @@ $backgroundActive: #eef;
 
 $labelWidth: 120px;
 
-.tx_find {
+.tx-find-edfu {
 
 	.invisible {
 		line-height: 0;
@@ -147,6 +147,7 @@ $labelWidth: 120px;
 			border-radius: 7px;
 			transition: background .5s ease-in-out;
 		}
+
 		li {
 			position: relative;
 			clear: right;
@@ -190,6 +191,7 @@ $labelWidth: 120px;
 						padding-left: $dashspace;
 						content: $dash;
 					}
+
 				}
 
 				.field-beziehung,
@@ -302,6 +304,7 @@ $labelWidth: 120px;
 			.zweifel {
 				@extend .brackets;
 			}
+
 		}
 	}
 
@@ -364,6 +367,7 @@ $labelWidth: 120px;
 					padding: 0;
 					font-size: 12px;
 				}
+
 			}
 
 			.fotorama__thumb-border {
@@ -394,6 +398,7 @@ $labelWidth: 120px;
 			font-size: 18px;
 			text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 2px;
 		}
+
 	}
 
 	.chassinat {
@@ -408,6 +413,7 @@ $labelWidth: 120px;
 				&:after {
 					content: '\2027';
 				}
+
 				&:last-child:after {
 					content: '';
 				}
@@ -459,11 +465,17 @@ $labelWidth: 120px;
 						li {
 							list-style-type: square;
 						}
+
 					}
+
 				}
+
 			}
+
 		}
+
 	}
+
 }
 
 .powerzoomer {
@@ -553,6 +565,7 @@ section.map {
 
 				&.highlighted {
 					opacity: 0.6;
+
 					&:hover, &.active {
 						opacity: 1;
 					}
@@ -586,13 +599,6 @@ section.map {
 
 			height: 20px;
 			width: 200px;
-
-			background: #ff0000; /* Old browsers */
-			background: -moz-linear-gradient(left, hsl(0, 100%, 50%) 0%, hsl(260, 100%, 50%) 100%); /* FF3.6+ */
-			background: -webkit-gradient(linear, left top, right top, color-stop(0%, hsl(0, 100%, 50%)), color-stop(100%, hsl(260, 100%, 50%))); /* Chrome,Safari4+ */
-			background: -webkit-linear-gradient(left, hsl(0, 100%, 50%) 0%, hsl(260, 100%, 50%) 100%); /* Chrome10+,Safari5.1+ */
-			background: -o-linear-gradient(left, hsl(0, 100%, 50%) 0%, hsl(260, 100%, 50%) 100%); /* Opera 11.10+ */
-			background: -ms-linear-gradient(left, hsl(0, 100%, 50%) 0%, hsl(260, 100%, 50%) 100%); /* IE10+ */
 			background: linear-gradient(to right, hsl(0, 100%, 50%) 0%, hsl(260, 100%, 50%) 100%); /* W3C */
 			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0000', endColorstr='#5400ff', GradientType=1); /* IE6-9 */
 		}
