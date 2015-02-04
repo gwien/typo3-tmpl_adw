@@ -21,16 +21,6 @@ $adw-red: #c90230;
 		}
 	}
 
-	.brackets {
-		&:before {
-			content: '(';
-		}
-
-		&:after {
-			content: ')';
-		}
-	}
-
 	$label-width: 120px;
 	.detail {
 		span {
@@ -46,7 +36,7 @@ $adw-red: #c90230;
 			}
 
 			&.head2 {
-				@extend h2;
+				display: block;
 				background: #fff;
 			}
 
@@ -137,14 +127,7 @@ $adw-red: #c90230;
 			}
 		}
 	}
-	.listPager {
-		li {
-			a {
-				background: transparent;
-				border: 0;
-			}
-		}
-	}
+
 	.literature,
 	.sources {
 		@extend .panel;

@@ -6,6 +6,7 @@ plugin.tx_find {
 	view {
 		templateRootPath = EXT:tmpl_adw/Resources/Private/Templates/Extensions/find/edfu/Templates/
 		partialRootPath = EXT:tmpl_adw/Resources/Private/Templates/Extensions/find/edfu/Partials/
+		layoutRootPath = EXT:tmpl_adw/Resources/Private/Templates/Extensions/find/edfu/Layouts/
 	}
 
 	settings {
@@ -184,7 +185,7 @@ plugin.tx_find {
 		# Configure custom CSS, JavaScript and localisation resources.
 		CSSPaths {
 			10 >
-			50 = EXT:tmpl_adw/Resources/Public/Css/edfu.css
+			50 >
 			70 >
 		}
 

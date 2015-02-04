@@ -22,9 +22,7 @@ plugin.tx_find {
 			timeout = 20
 		}
 		defaultQuery = *:*
-		# Add a filter query to not return documents of type »gott« or »ort«
-		# This will removed when project members log in with their account.
-		# (See the note at the end of the configuration file for details.)
+
 		additionalFilters >
 
 		dataFields >
@@ -32,7 +30,7 @@ plugin.tx_find {
 		queryFields >
 		# Query field configuration
 		queryFields {
-			# Main query field, suppress typ »wb_berlin« and »stelle« documents.
+			# Main query field,
 			0 {
 				id = default
 				query = %s
