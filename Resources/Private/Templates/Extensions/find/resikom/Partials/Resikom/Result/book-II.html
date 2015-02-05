@@ -1,0 +1,22 @@
+{namespace s=Subugoe\Find\ViewHelpers}
+<div class="panel-heading">
+	<h1>{document.image_name}</h1>
+</div>
+<div class="panel-body">
+	<f:format.crop maxCharacters="200">{document.image_caption -> f:format.raw()}</f:format.crop>
+	<p>
+	<f:link.action
+			action="detail"
+			arguments="{id:document.id}"
+			section="{settings.jumpToID}"
+			noCacheHash="1"
+			class="details internal no-change fa fa-chevron-right"
+			onclick="{f:if(
+				condition:'{settings.paging.detailPagePaging == 1}',
+				then:'return tx_find.detailViewWithPaging(this);'
+			)}"
+		>
+		<f:translate key="Show Detail Page"/>
+	</f:link.action>
+	</p>
+</div>

@@ -92,8 +92,14 @@ plugin.tx_find {
 				field = author_facet
 				sortOrder = count
 			}
-			30 >
-			40 >
+			30 {
+				id = hofinhaber
+				field = hofinhaber_facet
+			}
+			40 {
+				id = article
+				field = title_facet
+			}
 			50 >
 			130 >
 		}
