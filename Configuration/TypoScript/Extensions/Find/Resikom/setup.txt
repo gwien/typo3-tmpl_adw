@@ -90,7 +90,7 @@ plugin.tx_find {
 			20 {
 				id = author
 				field = author_facet
-				sortOrder = index
+				sortOrder = count
 			}
 			30 >
 			40 >
