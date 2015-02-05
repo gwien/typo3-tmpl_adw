@@ -10,37 +10,40 @@
 	display: none;
 	background-color: white;
 	border: 1px solid $link-color;
-	border-top: none;
+	border-top: 0;
 
 	li {
+		list-style-type: none;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #aaa;
+		margin: 0;
+		margin-bottom: 10px;
+
 		a {
 			color: #282828;
 			display: block;
 		}
 
-		list-style-type: none;
-		padding-bottom: 10px;
-		border-bottom: 1px solid #aaaaaa;
-		margin: 0;
-		margin-bottom: 10px;
-	}
-	li:last-child {
-		border-bottom: none;
-		padding-bottom: 0;
+		&:last-child {
+			border-bottom: 0;
+			padding-bottom: 0;
+		}
 	}
 }
 
 .tool-mode__menubutton {
 	display: block;
 	width: 100%;
-	&:active {
-		color: white;
-	}
 	color: white;
 	height: 39px;
 	vertical-align: middle;
 	background: none;
 	border: 0;
+
+	&:active {
+		color: white;
+	}
+
 }
 
 .tool-mode .content .csc-default:first-child h2 {

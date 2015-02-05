@@ -13,13 +13,4 @@
 		</f:for>
 	</section>
 </f:if>
-<f:if condition="{document.literature}">
-	<section class="literature">
-		<h1><f:link.page additionalAttributes="{data-toggle: 'collapse'}" section="literature-{document.id}">Literatur</f:link.page></h1>
-		<f:for each="{document.literature}" as="literature">
-			<div class="collapse" id="literature-{document.id}">
-				<p>{literature -> f:format.raw()}</p>
-			</div>
-		</f:for>
-	</section>
-</f:if>
+<f:render partial="Resikom/Detail/Literature" arguments="{document: document}" />

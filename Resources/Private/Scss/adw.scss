@@ -150,6 +150,7 @@ $search-gradient-end: #a20019;
 	right: 60px;
 	top: 0;
 	width: 130px;
+
 	a {
 		background: transparent url($image-path + "ico-sprite-search.png") no-repeat 55% 8px;
 		display: block;
@@ -157,17 +158,23 @@ $search-gradient-end: #a20019;
 		padding: 10px 0 10px 2px;
 		text-indent: -9999px;
 		width: 37px;
-		&:hover, &:active, &:focus {
+
+		&:hover,
+		&:active,
+		&:focus {
 			background-position: 55% -41px;
 		}
+
 	}
 }
 
 .logo {
 	margin: 3em 0;
+
 	a {
 		display: block;
 	}
+
 }
 
 .headlines {
@@ -175,22 +182,26 @@ $search-gradient-end: #a20019;
 		margin: 40px 0 0 0;
 		line-height: 120%;
 	}
+
 	p.header_title {
 		color: #ca0030;
 		font: bold 16px / 1.2 Cambria, Georgia, serif;
 		margin-bottom: 0 !important;
 		margin-top: 16px;
 	}
+
 	.subtitle {
 		color: #282828;
 		font: normal 18px / 1.4 Cambria, Georgia, serif;
 		margin: 0 0 0 0;
 	}
+
 	p.subheader {
 		color: #282828;
 		font: bold 13px / 1.2 Helvetica, Arial, sans-serif;
 		margin: 0;
 	}
+
 }
 
 p {
@@ -198,11 +209,13 @@ p {
 		color: #282828;
 		font: bold 0.813em / 1.2 Helvetica, Arial, sans-serif;
 	}
+
 	&.back {
 		border-top: 1px solid #fff;
 		border-bottom: 1px solid #aaa;
 		margin: 0;
 		padding: 0;
+
 		a {
 			background: transparent url($image-path + "arrow-left.png") no-repeat 0 50%;
 			border-bottom: 1px solid #fff;
@@ -212,9 +225,13 @@ p {
 			font: 1em / 24px Georgia, Helvetica, Arial, sans-serif;
 			padding: 11px 0 11px 18px;
 			text-decoration: none;
-			&:hover, &:active, &:focus {
+
+			&:hover,
+			&:active,
+			&:focus {
 				background-color: rgba(201, 2, 48, 0.05);
 			}
+
 		}
 	}
 }
@@ -223,9 +240,11 @@ p {
 	.subline {
 		color: $link-color;
 	}
+
 	h1 {
 		margin: 75px 0 40px;
 	}
+
 }
 
 .js-off .globalsearch {
@@ -234,14 +253,11 @@ p {
 
 .search-block {
 	border-radius: 16px;
-	-moz-border-radius: 16px;
-	-webkit-border-radius: 16px;
-	-webkit-box-shadow: 0 5px 5px -5px black inset;
-	-moz-box-shadow: 0 5px 5px -5px black inset;
 	box-shadow: 0 5px 5px -5px black inset;
 	background-color: #fff;
 	border: 1px solid #8b001a;
 	margin: 6px 8px;
+
 	input {
 		background: none;
 		border: none;
@@ -251,6 +267,7 @@ p {
 		padding: 6px 4px 2px;
 		width: 58px;
 	}
+
 	.search-submit {
 		background: transparent url($image-path + "ico-sprite-search.png") no-repeat 50% -100px;
 		display: inline-block;
@@ -259,6 +276,7 @@ p {
 		width: 20px;
 		height: 20px;
 	}
+
 }
 
 .teaser-head {
@@ -267,6 +285,7 @@ p {
 	width: 185px;
 	overflow: hidden;
 	height: 200px;
+
 	h2 {
 		padding: 0 0 10px 0;
 		font: italic normal 1em / 1 Georgia, serif !important;
@@ -274,30 +293,36 @@ p {
 		margin: 0 !important;
 		text-align: center;
 	}
+
 	p {
 		letter-spacing: 0.01em;
 		margin: 0 !important;
 		text-align: center;
 		font: italic 13px / 15px Georgia, serif !important;
 	}
+
 	a {
 		font: italic 13px / 15px Georgia, serif !important;
 	}
+
 }
 
 .content {
 	margin: 0 0 2em;
+
 	hr {
 		clear: both;
 		border-top: 1px solid #fff;
 		border-bottom: 1px solid #aaa;
 	}
+
 }
 
 .column-linklist {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
+
 	li {
 		border-top: 1px solid #fff;
 		border-bottom: 1px solid #aaa;
@@ -305,12 +330,12 @@ p {
 		width: 31%;
 		margin: 0 0 0 3.5%;
 		padding: 0;
-		-webkit-box-shadow: 0 1px 0 white, 0 -1px 0 #aaaaaa;
-		-moz-box-shadow: 0 1px 0 white, 0 -1px 0 #aaaaaa;
 		box-shadow: 0 1px 0 white, 0 -1px 0 #aaaaaa;
+
 		&:first-child {
 			margin: 0;
 		}
+
 	}
 	a {
 		background: transparent url($image-path + "arrow-right.png") no-repeat 100% 50%;
@@ -320,55 +345,78 @@ p {
 		font: 1em / 1.2 Cambria, Georgia, serif;
 		line-height: 22px;
 		text-decoration: none;
-		&:hover, &:active, &:focus {
+
+		&:hover,
+		&:active,
+		&:focus {
 			background-color: rgba(201, 2, 48, 0.05);
 		}
+
 	}
 }
 
 .aside {
-	h1, h2, h3, h4, h5, h6 {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 		font: bold 1em / 1.3 Helvetica, Arial, sans-serif;
 		margin: 0.5em 0;
 	}
-	p, ol, ul, li, address {
+
+	p,
+	ol,
+	ul,
+	li,
+	address {
 		font: 0.813em / 1.3 Helvetica, Arial, sans-serif;
 		margin: 1em 0;
 	}
+
 	li {
 		margin: 0;
 		font: 1em / 1.3 Helvetica, Arial, sans-serif;
 	}
+
 	hr {
 		margin: 1.5em 0;
 		&:first-child {
 			margin: 0 0 1.5em;
 		}
+
 	}
+
 }
 
 .footer {
 	color: #999;
 	text-align: center;
 	padding: 2em 0 4em;
+
 	ul {
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
 		text-align: center;
 	}
+
 	li {
 		border-left: 1px solid #999;
 		display: inline;
 		font-size: 0.813em;
+
 		&:first-child {
 			border-left: none;
 		}
 	}
+
 	a {
 		color: #999;
 		padding: 0 5px 0 8px;
 	}
+
 }
 
 .textleft {
@@ -392,40 +440,46 @@ p {
 }
 
 .lof-slider_5 {
+
 	.lof-main-outer {
 		.lof-next {
 			background: transparent url($image-path + "arrow-right-white.png") no-repeat right center;
 			right: 16px;
 		}
+
 		.lof-previous {
 			background: transparent url($image-path + "arrow-left-white.png") no-repeat left center;
 			left: 16px;
 		}
+
 	}
+
 	.lof-css3 {
-		-webkit-box-shadow: none;
-		-moz-box-shadow: none;
 		box-shadow: none;
 	}
 	.lof-description_black h3 {
 		font: 0.813em / 1.2 Helvetica, Arial, sans-serif;
 		color: #fff;
 		text-decoration: none;
+
 		a {
 			font: 0.813em / 1.2 Helvetica, Arial, sans-serif;
 			color: #fff;
 			text-decoration: none;
+
 			&:visited {
 				font: 0.813em / 1.2 Helvetica, Arial, sans-serif;
 				color: #fff;
 				text-decoration: none;
 			}
+
 			&:hover {
 				color: #fff;
 				text-decoration: underline;
 			}
 		}
 	}
+
 	.lof-description_white h3 a:hover, .lof-description_nobg h3 a:hover {
 		color: #fff;
 		text-decoration: underline;
@@ -445,43 +499,26 @@ p {
 
 .rss-feed {
 	line-height: 120%;
+
 	a {
 		font-size: 80%;
 	}
+
 	img {
 		margin: -2px 0 0 0 !important;
 		padding: 0 !important;
-		-webkit-box-shadow: none !important;
-		-moz-box-shadow: none !important;
 		box-shadow: none !important;
 	}
+
 }
 
 .teaser-logo {
 	text-align: center;
 }
 
-@mixin word-wrap() {
-	-ms-word-break: break-all;
-	word-break: break-all;
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	hyphens: auto;
-}
-
-// Optional hyphenation
-@mixin hyphens($mode: auto) {
-	word-wrap: break-word;
-	-webkit-hyphens: $mode;
-	-moz-hyphens: $mode;
-	-ms-hyphens: $mode; // IE10+
-	-o-hyphens: $mode;
-	hyphens: $mode;
-}
-
 .align-justify {
-	@include word-wrap();
-	@include hyphens(auto);
+	word-break: break-all;
+	hyphens: auto;
 	text-align: justify;
 }
 

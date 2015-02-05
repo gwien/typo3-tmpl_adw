@@ -3,7 +3,7 @@
 	<h1>{document.article-title}</h1>
 </div>
 <div class="panel-body">
-	<f:format.crop maxCharacters="200">{document.content -> f:format.raw()}</f:format.crop>
+	<f:format.crop maxCharacters="200"><f:format.stripTags>{document.content -> f:format.raw()}</f:format.stripTags></f:format.crop>
 	<p>
 	<f:link.action
 			action="detail"

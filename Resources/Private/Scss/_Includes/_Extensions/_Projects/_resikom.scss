@@ -1,7 +1,9 @@
 $larger: 133%;
-$dash: '\2014'; /* — */
+$dash: '\2014';
+/* — */
 $dashspace: .3em;
-$more: '\2026'; /* … */
+$more: '\2026';
+/* … */
 $adw-red: #c90230;
 
 .tx-find-resikom {
@@ -22,39 +24,30 @@ $adw-red: #c90230;
 	}
 
 	$label-width: 120px;
+
 	.detail {
-		span {
-			&.head {
+		.smallCaps {
+			font-variant: small-caps;
+			letter-spacing: .08em;
+		}
+
+		.general {
+			h1 {
 				padding: .5em 1em .5em .2em;
 				display: inline-block;
-			}
-
-			&.head1 {
-				@extend h1;
 				background: $adw-red;
 				color: #fff;
 			}
 
-			&.head2 {
-				display: block;
+			h2 {
+				padding: .5em 1em .5em .2em;
+				display: inline-block;
 				background: #fff;
 			}
 
-			&.p {
-				@extend p;
-				display: block;
-			}
-
-			&.italic {
-				font-style: italic;
-			}
-
-			&.smallCaps {
-				font-variant: small-caps;
-				letter-spacing: .08em;
-			}
 		}
 	}
+
 	form {
 		.fieldContainer {
 			.fieldLabel {
@@ -112,7 +105,7 @@ $adw-red: #c90230;
 		}
 
 		dd {
-			margin: 0 0 1em 0;
+			margin: 0 0 1em;
 			padding-left: 170px;
 			min-height: 1em;
 
@@ -181,6 +174,7 @@ $adw-red: #c90230;
 					margin-right: 0;
 					font-size: 80%;
 				}
+
 				&:hover {
 					color: $adw-red;
 
@@ -202,6 +196,7 @@ $adw-red: #c90230;
 				&:hover {
 					color: $adw-red;
 				}
+
 			}
 		}
 	}
@@ -224,6 +219,7 @@ $adw-red: #c90230;
 				display: inline;
 				padding: 0;
 			}
+
 		}
 	}
 
@@ -241,6 +237,7 @@ $adw-red: #c90230;
 				top: 3px;
 				width: 200px;
 			}
+
 		}
 	}
 
@@ -299,17 +296,25 @@ $adw-red: #c90230;
 			font-size: 18px;
 			text-shadow: rgba(0, 0, 0, .5) 1px 1px 2px;
 		}
+
 	}
 
 	article {
 		&.detail {
 			@include make-lg-column(11);
 		}
+
 	}
+
 	aside {
 		&.sidebar {
 			@include make-lg-column(5);
 		}
+
+		.subtitle {
+			font-style: italic;
+		}
+
 	}
 
 	article.fields {
@@ -433,4 +438,3 @@ section.map {
 		}
 	}
 }
-
