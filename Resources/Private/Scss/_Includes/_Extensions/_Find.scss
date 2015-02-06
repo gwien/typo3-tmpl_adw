@@ -3,14 +3,14 @@ $inactive: #bbb;
 $text-inverted: #fff;
 $background-active: #eef;
 $highlight: #fdee53;
-$highlightBorder: #b00;
+$highlight-border: #b00;
 $downlight: #666;
 $downlight-inverted: #ddd;
 $tab-selected: #263476;
 
 // form borders
-$borderA1: #b3b3b3;
-$borderA2: #d2d2d2;
+$border-a1: #b3b3b3;
+$border-a2: #d2d2d2;
 $backgroundA: #f3f5f9;
 $textA: #333;
 $borderB1: #d4d4d4;
@@ -59,11 +59,12 @@ $textB: #555;
 		&.error {
 			margin-bottom: 1em;
 			padding: 1em;
-			border: 2px solid $highlightBorder;
+			border: 2px solid $highlight-border;
 		}
 
 		&.linked-data {
 			margin-top: 15px;
+
 			ul {
 				margin-left: 0 !important;
 			}
@@ -96,7 +97,7 @@ $textB: #555;
 
 			input {
 				padding: 2px;
-				border: 1px solid #C90230;
+				border: 1px solid #c90230;
 				color: $textA;
 				background: $backgroundA;
 			}
@@ -146,14 +147,10 @@ $textB: #555;
 			bottom: 0;
 		}
 
-		.fieldType-search input:-moz-placeholder {
-			color: #999;
-		}
-
 		.submit {
 			height: 42px;
 			width: 100%;
-			background-color: #C90230;
+			background-color: #c90230;
 			border-style: solid;
 			border-width: 1px;
 			border-color: $borderB1 $borderB2 $borderB2 $borderB1;
@@ -170,7 +167,7 @@ $textB: #555;
 		}
 
 		.submit:active {
-			background-image: url(../Images/button_shade_large_click.png);
+			background-image: url('../Images/button_shade_large_click.png');
 			background-color: $backgroundBActive;
 		}
 
@@ -380,7 +377,7 @@ $textB: #555;
 				border: 0 none;
 
 				a {
-					padding: .1em .5em 0 .5em;
+					padding: .1em .5em 0;
 					display: inline-block;
 				}
 			}
@@ -465,7 +462,7 @@ $textB: #555;
 				}
 
 				li {
-					& > a {
+					> a {
 						border: none !important;
 						background-color: transparent !important;
 					}
@@ -564,7 +561,7 @@ $textB: #555;
 	.results {
 		.pager {
 			li {
-				& > a {
+				> a {
 					border: none !important;
 					background-color: transparent !important;
 				}
@@ -573,7 +570,7 @@ $textB: #555;
 
 			.next,
 			.previous {
-				& > a {
+				> a {
 					float: none;
 				}
 
