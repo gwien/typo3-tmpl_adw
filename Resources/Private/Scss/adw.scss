@@ -67,6 +67,8 @@ body {
 .grid_13 {
 	@include make-lg-column(13);
 	@include make-md-column(13);
+	@include make-sm-column(13);
+	@include make-xs-column(13);
 }
 
 .grid_12 {

@@ -35,7 +35,6 @@ plugin.tx_find {
 				id = default
 				query = %s
 				type = Text
-				noescape = 1
 				autocomplete = 1
 				autocompleteDictionary = suggest
 			}

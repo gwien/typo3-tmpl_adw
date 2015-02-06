@@ -13,10 +13,6 @@ plugin.tx_find {
 		# Connection setup for the Solr index.
 		# Needs to be adapted / overwritten for the final configuration.
 		connection {
-			host = vlib.sub.uni-goettingen.de
-			port = 80
-			path = /solr/edfu
-
 			# Use a long 10 second timeout for Solr queries.
 			timeout = 10
 		}
