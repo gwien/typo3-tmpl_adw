@@ -1,6 +1,6 @@
-<li id="c{config.uid}-result-{document.id}">
+<li id="c{config.uid}-result-{document.id}" class="panel panel-default">
 	<article class="result">
-			<f:render partial="Edfu/Result/{document.typ}" arguments="{_all}"/>
+		<f:render partial="Edfu/Result/{document.typ}" arguments="{_all}"/>
 		<f:if condition="{f:security.ifHasRole(role:'Edfu', then:1, else:0)}">
 			<f:alias map="{solrQuery:'{f:if(
 				condition:arguments.q.default,
