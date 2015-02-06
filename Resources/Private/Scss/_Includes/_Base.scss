@@ -5,7 +5,7 @@ body {
 }
 
 p {
-	font: 0.813em / 1.231 Helvetica, Arial, sans-serif;
+	font: .813em / 1.231 Helvetica, Arial, sans-serif;
 }
 
 ul {
@@ -20,31 +20,36 @@ ol {
  * 	 Headings
  */
 
-h1, .h1 {
+h1,
+.h1 {
 	font: normal 1.625em / 28px Cambria, Georgia, serif;
-	letter-spacing: 0.01em;
+	letter-spacing: .01em;
 	margin: 1em 0;
 }
 
-h2, .h2 {
+h2,
+.h2 {
 	font: bold 1.1em / 18px Cambria, Georgia, serif;
 	margin: 24px 0;
 }
 
-h3, .h3 {
+h3,
+.h3 {
 	font: bold 1em / 18px Cambria, Georgia, serif;
 	margin: 18px 0;
 }
 
-h4, .h4 {
+h4,
+.h4 {
 	font: bold 1em / 24px Helvetica, Arial, sans-serif;
 	margin: 24px 0 0;
 }
 
-h5, .h5 {
+h5,
+.h5 {
 	color: $link-color;
 	font: bold 1em / 1.2 Helvetica, Arial, sans-serif;
-	margin: 0.25em 0 1em;
+	margin: .25em 0 1em;
 }
 
 q {
@@ -66,19 +71,25 @@ h4 + address {
 a {
 	color: $link-color;
 	text-decoration: none;
+
 	&:visited {
 		color: $link-color;
 	}
+
 	&:hover {
 		color: $link-color;
 		text-decoration: underline;
 	}
+
 	&:focus {
 		outline: thin dotted;
 		text-decoration: underline;
 	}
-	&:hover, &:active {
+
+	&:hover,
+	&:active {
 		outline: 0;
 		text-decoration: underline;
 	}
+
 }

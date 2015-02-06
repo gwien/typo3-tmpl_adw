@@ -18,7 +18,7 @@ plugin.tx_find {
 			port = 80
 			path = /solr/resikom
 
-			# Use a long 10 second timeout for Solr queries.
+			# Use a long 20 second timeout for Solr queries.
 			timeout = 20
 		}
 		defaultQuery = *:*
@@ -135,16 +135,11 @@ plugin.tx_find {
 			10 = EXT:tmpl_adw/Resources/Public/JavaScript/find.js
 			20 = EXT:tmpl_adw/Resources/Public/JavaScript/bootstrap.min.js
 			50 = EXT:tmpl_adw/Resources/Public/JavaScript/Find/Resikom.js
-			75 = EXT:tmpl_adw/Resources/Public/JavaScript/jquery.chosen/chosen.jquery.min.js
+			25 = EXT:tmpl_adw/Resources/Public/JavaScript/jquery.chosen/chosen.jquery.min.js
 		}
 
-		#languageRootPath = EXT:find/Projects/edfu/Language/
 		languageRootPath = EXT:tmpl_adw/Resources/Private/Language/Resikom/
 		jumpToID >
 	}
 
-	felogin < plugin.tx_felogin_pi1
-	felogin {
-		storagePid = {$plugin.tx_find.felogin.storagePid}
-	}
 }

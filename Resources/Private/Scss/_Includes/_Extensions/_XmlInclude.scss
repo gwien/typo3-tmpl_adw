@@ -51,16 +51,14 @@
 		display: none;
 	}
 
-	ul {
-		&.pagination-links {
-			@extend .pager;
-			margin: 0;
+	.pagination-links {
+		@extend .pager;
+		margin: 0;
 
-			li {
-				> a {
-					@extend .pull-left;
-					border-radius: $border-radius-small;
-				}
+		li {
+			> a {
+				@extend .pull-left;
+				border-radius: $border-radius-small;
 			}
 		}
 	}

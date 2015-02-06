@@ -3,14 +3,6 @@
 <section class="general">
 	{document.content -> f:format.raw()}
 </section>
-<f:if condition="{document.sources}">
-	<section class="sources">
-		<h1><f:link.page additionalAttributes="{data-toggle: 'collapse'}" section="sources-{document.id}">Quellen</f:link.page></h1>
-		<f:for each="{document.sources}" as="source">
-			<div class="collapse" id="sources-{document.id}">
-				<p>{source -> f:format.raw()}</p>
-			</div>
-		</f:for>
-	</section>
-</f:if>
+
+<f:render partial="Resikom/Detail/Sources" arguments="{document: document}" />
 <f:render partial="Resikom/Detail/Literature" arguments="{document: document}" />

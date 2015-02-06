@@ -12,15 +12,15 @@
 	li {
 		float: left;
 		overflow: hidden;
-		font-size: 0.813em;
+		font-size: .813em;
 	}
 
 	h2 {
 		float: left;
 		overflow: hidden;
-		font-size: 0.813em;
+		font-size: .813em;
 		color: #fff;
-		font: bold 0.813em / 39px Helvetica, Arial, sans-serif;
+		font: bold .813em / 39px Helvetica, Arial, sans-serif;
 		height: 39px;
 		margin: 0;
 		padding: 0 10px;
@@ -28,7 +28,7 @@
 	}
 
 	a {
-		background: $link-color url($image-path + "breadcrumb-sprite.png") no-repeat 0 -39px;
+		background: $link-color url($image-path + 'breadcrumb-sprite.png') no-repeat 0 -39px;
 		color: #fff;
 		display: block;
 		font-weight: bold;
@@ -45,9 +45,10 @@
 		}
 
 	}
+
 	li {
 		&.first a {
-			background: $link-color url($image-path + "breadcrumb-sprite.png") no-repeat 0 0;
+			background: $link-color url($image-path + 'breadcrumb-sprite.png') no-repeat 0 0;
 			font-weight: bold;
 			height: 39px;
 			padding: 8px 10px 8px 15px;
@@ -59,13 +60,13 @@
 		}
 
 		&.cur a {
-			background: $link-color url($image-path + "breadcrumb-sprite.png") no-repeat 0 -78px;
+			background: $link-color url($image-path + 'breadcrumb-sprite.png') no-repeat 0 -78px;
 			padding: 0 5px 0 25px;
 		}
 	}
 
 	&:after {
-		content: url($image-path + "breadcrumb-end.png");
+		content: url($image-path + 'breadcrumb-end.png');
 		display: block;
 		height: 40px;
 		width: 160px;

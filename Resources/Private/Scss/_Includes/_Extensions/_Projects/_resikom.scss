@@ -80,6 +80,7 @@ $adw-red: #c90230;
 
 	.facet-type-Tabs ol li.facetActive {
 		background: $adw-red;
+
 		a {
 			color: #fff;
 		}
@@ -126,13 +127,13 @@ $adw-red: #c90230;
 		@extend .panel;
 		@extend .panel-default;
 
-		h1 {
+		.head {
 			@extend .panel-heading;
 			@extend .panel-title;
 			margin-bottom: 0;
 		}
 
-		p {
+		.content-blob {
 			@extend .panel-body;
 		}
 	}
@@ -304,6 +305,30 @@ $adw-red: #c90230;
 			@include make-lg-column(11);
 		}
 
+		&.fields {
+			padding-top: 1em;
+
+			dl {
+				margin-top: 1em;
+
+				dt {
+					width: 200px;
+				}
+
+				dd {
+					padding-left: 210px;
+
+					ul {
+						padding-left: 2em;
+
+						li {
+							list-style-type: square;
+						}
+					}
+				}
+			}
+		}
+
 	}
 
 	aside {
@@ -317,29 +342,6 @@ $adw-red: #c90230;
 
 	}
 
-	article.fields {
-		padding-top: 1em;
-
-		dl {
-			margin-top: 1em;
-
-			dt {
-				width: 200px;
-			}
-
-			dd {
-				padding-left: 210px;
-
-				ul {
-					padding-left: 2em;
-
-					li {
-						list-style-type: square;
-					}
-				}
-			}
-		}
-	}
 }
 
 .powerzoomer {

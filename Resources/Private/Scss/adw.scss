@@ -20,7 +20,9 @@
 @import '_Includes/Fancybox';
 @import '../../../Build/bower/fontawesome/scss/font-awesome';
 
-$fa-font-path: "../Fonts";
+$fa-font-path: '../Fonts';
+$search-gradient-start: #ac001e;
+$search-gradient-end: #a20019;
 
 .top-container {
 	@extend .container-fluid;
@@ -30,7 +32,7 @@ $fa-font-path: "../Fonts";
 }
 
 body {
-	background: #f9f9f5 url($image-path + "noise1.png") repeat;
+	background: #f9f9f5 url($image-path + 'noise1.png') repeat;
 }
 
 .main {
@@ -137,12 +139,9 @@ body {
 	@extend .hidden-xs;
 }
 
-$search-gradient-start: #ac001e;
-$search-gradient-end: #a20019;
-
 .search {
 	background-color: $link-color;
-	background: url($image-path + "search-devider.png"), linear-gradient(to bottom, $link-color 0%, $search-gradient-start 95%, $search-gradient-end 100%);
+	background: url($image-path + 'search-devider.png'), linear-gradient(to bottom, $link-color 0%, $search-gradient-start 95%, $search-gradient-end 100%);
 	background-repeat: no-repeat;
 	background-position: 0 50%;
 	height: 39px;
@@ -152,7 +151,7 @@ $search-gradient-end: #a20019;
 	width: 130px;
 
 	a {
-		background: transparent url($image-path + "ico-sprite-search.png") no-repeat 55% 8px;
+		background: transparent url($image-path + 'ico-sprite-search.png') no-repeat 55% 8px;
 		display: block;
 		line-height: 19px;
 		padding: 10px 0 10px 2px;
@@ -179,11 +178,11 @@ $search-gradient-end: #a20019;
 
 .headlines {
 	h1 {
-		margin: 40px 0 0 0;
+		margin: 40px 0 0;
 		line-height: 120%;
 	}
 
-	p.header_title {
+	.header_title {
 		color: #ca0030;
 		font: bold 16px / 1.2 Cambria, Georgia, serif;
 		margin-bottom: 0 !important;
@@ -193,10 +192,10 @@ $search-gradient-end: #a20019;
 	.subtitle {
 		color: #282828;
 		font: normal 18px / 1.4 Cambria, Georgia, serif;
-		margin: 0 0 0 0;
+		margin: 0;
 	}
 
-	p.subheader {
+	.subheader {
 		color: #282828;
 		font: bold 13px / 1.2 Helvetica, Arial, sans-serif;
 		margin: 0;
@@ -207,7 +206,7 @@ $search-gradient-end: #a20019;
 p {
 	&.subline {
 		color: #282828;
-		font: bold 0.813em / 1.2 Helvetica, Arial, sans-serif;
+		font: bold .813em / 1.2 Helvetica, Arial, sans-serif;
 	}
 
 	&.back {
@@ -217,7 +216,7 @@ p {
 		padding: 0;
 
 		a {
-			background: transparent url($image-path + "arrow-left.png") no-repeat 0 50%;
+			background: transparent url($image-path + 'arrow-left.png') no-repeat 0 50%;
 			border-bottom: 1px solid #fff;
 			border-top: 1px solid #aaa;
 			color: #282828;
@@ -229,7 +228,7 @@ p {
 			&:hover,
 			&:active,
 			&:focus {
-				background-color: rgba(201, 2, 48, 0.05);
+				background-color: rgba(201, 2, 48, .05);
 			}
 
 		}
@@ -260,16 +259,16 @@ p {
 
 	input {
 		background: none;
-		border: none;
+		border: 0;
 		color: #666;
-		font-size: 0.813em;
+		font-size: .813em;
 		margin: 0 5px;
 		padding: 6px 4px 2px;
 		width: 58px;
 	}
 
 	.search-submit {
-		background: transparent url($image-path + "ico-sprite-search.png") no-repeat 50% -100px;
+		background: transparent url($image-path + 'ico-sprite-search.png') no-repeat 50% -100px;
 		display: inline-block;
 		padding: 0;
 		text-indent: -9999px;
@@ -280,22 +279,22 @@ p {
 }
 
 .teaser-head {
-	background: transparent url($image-path + "teaser-head-bg_mini.png") no-repeat;
+	background: transparent url($image-path + 'teaser-head-bg_mini.png') no-repeat;
 	padding: 15px 25px 40px;
 	width: 185px;
 	overflow: hidden;
 	height: 200px;
 
 	h2 {
-		padding: 0 0 10px 0;
+		padding: 0 0 10px;
 		font: italic normal 1em / 1 Georgia, serif !important;
-		letter-spacing: 0.01em;
+		letter-spacing: .01em;
 		margin: 0 !important;
 		text-align: center;
 	}
 
 	p {
-		letter-spacing: 0.01em;
+		letter-spacing: .01em;
 		margin: 0 !important;
 		text-align: center;
 		font: italic 13px / 15px Georgia, serif !important;
@@ -330,15 +329,16 @@ p {
 		width: 31%;
 		margin: 0 0 0 3.5%;
 		padding: 0;
-		box-shadow: 0 1px 0 white, 0 -1px 0 #aaaaaa;
+		box-shadow: 0 1px 0 white, 0 -1px 0 #aaa;
 
 		&:first-child {
 			margin: 0;
 		}
 
 	}
+
 	a {
-		background: transparent url($image-path + "arrow-right.png") no-repeat 100% 50%;
+		background: transparent url($image-path + 'arrow-right.png') no-repeat 100% 50%;
 		color: #282828;
 		display: block;
 		padding: 11px 18px 11px 0;
@@ -349,7 +349,7 @@ p {
 		&:hover,
 		&:active,
 		&:focus {
-			background-color: rgba(201, 2, 48, 0.05);
+			background-color: rgba(201, 2, 48, .05);
 		}
 
 	}
@@ -363,7 +363,7 @@ p {
 	h5,
 	h6 {
 		font: bold 1em / 1.3 Helvetica, Arial, sans-serif;
-		margin: 0.5em 0;
+		margin: .5em 0;
 	}
 
 	p,
@@ -371,7 +371,7 @@ p {
 	ul,
 	li,
 	address {
-		font: 0.813em / 1.3 Helvetica, Arial, sans-serif;
+		font: .813em / 1.3 Helvetica, Arial, sans-serif;
 		margin: 1em 0;
 	}
 
@@ -382,6 +382,7 @@ p {
 
 	hr {
 		margin: 1.5em 0;
+
 		&:first-child {
 			margin: 0 0 1.5em;
 		}
@@ -405,10 +406,10 @@ p {
 	li {
 		border-left: 1px solid #999;
 		display: inline;
-		font-size: 0.813em;
+		font-size: .813em;
 
 		&:first-child {
-			border-left: none;
+			border-left: 0;
 		}
 	}
 
@@ -443,12 +444,12 @@ p {
 
 	.lof-main-outer {
 		.lof-next {
-			background: transparent url($image-path + "arrow-right-white.png") no-repeat right center;
+			background: transparent url($image-path + 'arrow-right-white.png') no-repeat right center;
 			right: 16px;
 		}
 
 		.lof-previous {
-			background: transparent url($image-path + "arrow-left-white.png") no-repeat left center;
+			background: transparent url($image-path + 'arrow-left-white.png') no-repeat left center;
 			left: 16px;
 		}
 
@@ -457,18 +458,19 @@ p {
 	.lof-css3 {
 		box-shadow: none;
 	}
+
 	.lof-description_black h3 {
-		font: 0.813em / 1.2 Helvetica, Arial, sans-serif;
+		font: .813em / 1.2 Helvetica, Arial, sans-serif;
 		color: #fff;
 		text-decoration: none;
 
 		a {
-			font: 0.813em / 1.2 Helvetica, Arial, sans-serif;
+			font: .813em / 1.2 Helvetica, Arial, sans-serif;
 			color: #fff;
 			text-decoration: none;
 
 			&:visited {
-				font: 0.813em / 1.2 Helvetica, Arial, sans-serif;
+				font: .813em / 1.2 Helvetica, Arial, sans-serif;
 				color: #fff;
 				text-decoration: none;
 			}
@@ -480,7 +482,8 @@ p {
 		}
 	}
 
-	.lof-description_white h3 a:hover, .lof-description_nobg h3 a:hover {
+	.lof-description_white h3 a:hover,
+	.lof-description_nobg h3 a:hover {
 		color: #fff;
 		text-decoration: underline;
 	}
@@ -505,7 +508,7 @@ p {
 	}
 
 	img {
-		margin: -2px 0 0 0 !important;
+		margin: -2px 0 0 !important;
 		padding: 0 !important;
 		box-shadow: none !important;
 	}
