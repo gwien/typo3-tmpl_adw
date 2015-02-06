@@ -5,6 +5,7 @@ $dashspace: .3em;
 $more: '\2026';
 /* … */
 $adw-red: #c90230;
+$label-width: 120px;
 
 .tx-find-resikom {
 
@@ -12,6 +13,9 @@ $adw-red: #c90230;
 		&.facets {
 			.facetCount {
 				display: inline;
+			}
+			.invisible {
+				display: none;
 			}
 		}
 	}
@@ -22,8 +26,6 @@ $adw-red: #c90230;
 			padding-right: $dashspace;
 		}
 	}
-
-	$label-width: 120px;
 
 	.detail {
 		.smallCaps {
@@ -48,14 +50,14 @@ $adw-red: #c90230;
 		}
 	}
 
-	form {
+	.searchForm {
 		.fieldContainer {
+
 			.fieldLabel {
 				width: $label-width;
 			}
 
 			.inputType-text {
-				width: 400px;
 				height: auto;
 				margin: 0 6px 2px 0;
 				padding: 4px;
@@ -84,6 +86,10 @@ $adw-red: #c90230;
 		a {
 			color: #fff;
 		}
+	}
+
+	.facet {
+		@extend .panel-default;
 	}
 
 	.facetCount {
@@ -118,6 +124,7 @@ $adw-red: #c90230;
 					padding: 0 0 0 2em;
 					text-indent: -2em;
 				}
+
 			}
 		}
 	}
@@ -136,6 +143,7 @@ $adw-red: #c90230;
 		.content-blob {
 			@extend .panel-body;
 		}
+
 	}
 
 	ol.resultList {
@@ -300,10 +308,10 @@ $adw-red: #c90230;
 
 	}
 
-	article {
-		&.detail {
-			@include make-lg-column(11);
-		}
+	.article {
+		@include make-lg-column(11);
+		@include make-md-column(11);
+		@include make-sm-column(11);
 
 		&.fields {
 			padding-top: 1em;
@@ -331,10 +339,10 @@ $adw-red: #c90230;
 
 	}
 
-	aside {
-		&.sidebar {
-			@include make-lg-column(5);
-		}
+	.sidebar {
+		@include make-lg-column(5);
+		@include make-md-column(5);
+		@include make-sm-column(5);
 
 		.subtitle {
 			font-style: italic;

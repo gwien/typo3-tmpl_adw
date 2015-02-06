@@ -132,10 +132,10 @@ plugin.tx_find {
 		}
 
 		JSPaths {
+			5 = EXT:tmpl_adw/Resources/Public/JavaScript/jquery.chosen/chosen.jquery.min.js
 			10 = EXT:tmpl_adw/Resources/Public/JavaScript/find.js
 			20 = EXT:tmpl_adw/Resources/Public/JavaScript/bootstrap.min.js
 			50 = EXT:tmpl_adw/Resources/Public/JavaScript/Find/Resikom.js
-			25 = EXT:tmpl_adw/Resources/Public/JavaScript/jquery.chosen/chosen.jquery.min.js
 		}
 
 		languageRootPath = EXT:tmpl_adw/Resources/Private/Language/Resikom/

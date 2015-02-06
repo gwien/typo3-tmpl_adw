@@ -76,7 +76,7 @@ $textB: #555;
 	}
 
 	/* search form */
-	form {
+	.searchForm {
 
 		position: relative;
 		line-height: 150%;
@@ -97,7 +97,7 @@ $textB: #555;
 
 			input {
 				padding: 2px;
-				border: 1px solid #c90230;
+				border: 1px solid $adw-red;
 				color: $textA;
 				background: $backgroundA;
 			}
@@ -148,9 +148,8 @@ $textB: #555;
 		}
 
 		.submit {
-			height: 42px;
 			width: 100%;
-			background-color: #c90230;
+			background-color: $adw-red;
 			border-style: solid;
 			border-width: 1px;
 			border-color: $borderB1 $borderB2 $borderB2 $borderB1;
@@ -181,7 +180,7 @@ $textB: #555;
 		}
 
 		a.extendedSearch:hover {
-			background-color: #c90230;
+			background-color: $adw-red;
 			color: white;
 			border: 1px solid #b4b4b4;
 			transition: all .1s ease-in;
@@ -189,7 +188,7 @@ $textB: #555;
 
 		.button-reset-form {
 			border: 1px solid darkgrey;
-			color: #c90230;
+			color: $adw-red;
 			background-color: white;
 			padding: 5px;
 			width: 100%;
@@ -199,7 +198,7 @@ $textB: #555;
 
 		.button-reset-form:hover {
 			color: white;
-			background-color: #c90230;
+			background-color: $adw-red;
 			border: 1px solid #b4b4b4;
 			transition: all .1s ease-in;
 		}
@@ -384,7 +383,7 @@ $textB: #555;
 
 			li.facetActive {
 				@extend li;
-				background-color: #c90230;
+				background-color: $adw-red;
 				color: $text-inverted;
 
 				.facetCount {
@@ -399,6 +398,10 @@ $textB: #555;
 		text-align: center;
 		margin-top: .5em;
 		margin-bottom: .5em;
+
+		.fa {
+			font-size: 40px;
+		}
 
 		* {
 			margin: 0;
@@ -451,11 +454,17 @@ $textB: #555;
 		}
 
 		.resultPager {
-			display: block;
+			@include make-lg-column(16);
+			@extend .pull-right;
+
 			text-align: right;
 
 			.pager {
 				color: $inactive;
+
+				.fa {
+					font-size: 40px
+				}
 
 				&:before {
 					display: inline-block;
