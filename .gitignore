@@ -26,3 +26,5 @@ bower_components
 Resources/Public/JavaScript/Polymer
 !Resources/Public/JavaScript/Polymer/.gitkeep
 Resources/Public/JavaScript/bootstrap.min.js
+
+Build/ScssReport.xml

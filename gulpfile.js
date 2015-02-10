@@ -51,6 +51,7 @@ gulp.task('lint', function () {
 	gulp.src(config.paths.sass)
 		.pipe(cached('scsslint'))
 		.pipe(scsslint({
+			'reporterOutput': './/Build/ScssReport.xml',
 			'config': 'Build/scss-lint.yml',
 			'maxBuffer': 9999999
 		}))
