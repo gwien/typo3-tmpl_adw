@@ -28,7 +28,7 @@ Dazu muss ein FORK des Repositoriums https://github.com/subugoe/typo3-tmpl_adw a
 
 Ämter-Liste
 ~~~~~~~~~~~
-Die Ämter-Liste liegt als CSV-Datei (Einträge müssen durch ein Komma getrennt sein) auf dem Webspace der Personendatenbank. Durch das Export-Skripte (auch bei der Personendatenbank) wird eine Aktualisierung angestoßen. Beim nächsten regelmäßigen Update des SOLR der Klosterdatenbank sind die Änderungen in der Klosterdatenbank übernommen.
+Die Ämter-Liste liegt als CSV-Datei (Einträge müssen durch ein Komma getrennt sein) auf dem Webspace der Personendatenbank. Durch das Export-Skripte (auch bei der Personendatenbank) wird eine Aktualisierung angestoßen. Beim nächsten regelmäßigen oder manuellen Update des SOLRs der Klosterdatenbank sind die Änderungen in der Klosterdatenbank übernommen.
 
 Literatur
 ~~~~~~~~~
@@ -61,9 +61,13 @@ Datenmodell
 
 Inkrementeller Import
 ---------------------
-* Die Datei mit dem Namen „inkKlosterDump.sql“ muss auf dem Github-Account „GermaniaSacra-dumps“ abgelegt werden. Dazu muss das Repositorium geforkt werden und die Datei muss dann mit einem Pull-Request an die SUB "gesendet" werden. Die Struktur der Datei geht aus der vorhandenen Beispieldatei auf Github hervor.
+* Die Datei mit dem Namen „inkKlosterDump.sql“ muss auf dem geschützten Github-Account „GermaniaSacra-dumps“ (https://github.com/subugoe/GermaniaSacra-dumps) abgelegt werden. Dazu muss das Repositorium geforkt werden und die Datei muss dann mit einem Pull-Request an die SUB "gesendet" werden. Die Struktur der Datei geht aus der vorhandenen Beispieldatei auf Github hervor.
 * Zum Importieren der Daten klickt man im DIM der Klosterdatenbank den Menüpunkt „Daten-Import“ auf der oberen Menüleiste rechts an. Die Daten werden dann automatisch vom GitHub in die GS-Datenbank (Klostertabelle) importiert.
 * Im Anschluss befindet sich (ebendfalls im DIM) eine Log-Datei, die über den letzten Import informiert.
+
+.. image:: ../Images/GS/import.png
+	:width: 300px
+	:alt: Inkrementeller Import
 
 
 SOLR
@@ -120,3 +124,7 @@ FE-Rechtemanagement
 -------------------
 
 Das Rechtemanagement für die FE-Zugänge erfolgt über das TYPO3-BE. Die Nutzerverwaltung ist unter Germania Sacra mit der ID=641 zu finden. Dort können neuen Website-Benutzer angelgt werden. Sie müssen der Benutzergruppe "Germania Sacra" zugewiesen sein.
+
+.. image:: ../Images/GS/fe_user.png
+	:width: 800px
+	:alt: FE-Rechtemanagement

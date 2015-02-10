@@ -46,19 +46,29 @@ Wenn der FE-Editor genutz werden soll, um über das Frontend Einträge durchzuf�
 Wenn einzelne Datensätze angelegt werden sollen, kann das über das FE erfolgen. Dabei ist eine Voraussetzung, dass man als Redakteurin/Redakteur im BE eingeloggt ist und die Seite im FE mit https aufruft. Damit ergeben sich die Möglichkeiten neue Datensätze anzulegen bzw. bestehende zu editieren.
 
 .. image:: ../Images/Bib/bib_feeditor1.png
-	:width: 800px
+	:width: 600px
 	:alt: FE-Editor
 
 Mit dem Plus oben rechts öffnet sich der FE-Editor, über den ein neuer Datensatz angelegt werden kann.
 
 .. image:: ../Images/Bib/bib_feeditor_datensatz_anlegen.png
-	:width: 800px
+	:width: 600px
 	:alt: FE-Editor zum Anlegen von neuen Datensätzen
 
 
 9.3.2 Import von Datensätzen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Bitte Beachten: Es gibt keine Dublettenerkennung. Wenn Datensätze importiert werden, die es bereits gibt, wird ein weiterer Eintrag in die Bibliographie geschrieben.
+
+Für einen Import muss man wie oben genannt vorgehen. Einloggen ins BE und FE mit https aufrufen. Unten auf der Seite befindet sich die Möglichkeit zum Import.
+
+Wenn ein gesamter Import stattfinden soll, also die alten Einträge überschrieben, dann muss dein Häckchen bei "Löschen aller Einträge vor dem Import" gesetzt sein.
+
+.. image:: ../Images/Bib/bib_import.png
+	:width: 300px
+	:alt: Import von Datensätzen
 
 
 9.4 Template anpassen
 ---------------------
+Das Template wird für die Darstellung der Listenansicht und der Detailansicht verwendet. Aktuell kann das Template nur von der SUB angepasst werden. 
