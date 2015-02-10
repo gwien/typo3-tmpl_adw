@@ -6,21 +6,19 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	rename = require('gulp-rename'),
 	autoprefixer = require('gulp-autoprefixer'),
-	cached = require('gulp-cached');
+	cached = require('gulp-cached'),
 	bower = require('gulp-bower');
 
 var config = {
 	paths: {
 		sass: ['./Resources/Private/Scss/**/*.scss', './Resources/Private/Scss/*.scss', '!./Resources/Private/Scss/vendors/**/*.scss'],
 		fonts: ['./Build/bower/fontawesome/fonts/*'],
-		polymer: ['./Build/bower/polymer/*'],
 		bootstrap: ['./Build/bower/bootstrap-sass-twbs/assets/']
 	},
 	autoprefixer: {
 		browsers: [
 			'last 2 versions',
 			'safari 5',
-			'ie 8',
 			'ie 9',
 			'opera 12.1',
 			'ios 6',
@@ -58,7 +56,7 @@ gulp.task('lint', function () {
 });
 
 gulp.task('compile', function () {
-	gulp.start('bower', 'copy-fonts', 'copy-bootstrap-js', 'copy-polymer', 'sass', 'uglify')
+	gulp.start('bower', 'copy-fonts', 'copy-bootstrap-js', 'sass', 'uglify')
 });
 
 gulp.task('watch', function () {
@@ -87,12 +85,6 @@ gulp.task('copy-fonts', function () {
 	return gulp.src(config.paths.fonts)
 		.pipe(gulp.dest('Resources/Public/Fonts/'));
 });
-
-gulp.task('copy-polymer', function () {
-	return gulp.src(config.paths.polymer)
-		.pipe(gulp.dest('Resources/Public/JavaScript/Polymer/'));
-});
-
 
 gulp.task('default', function () {
 	gulp.start('lint', 'compile', 'watch')

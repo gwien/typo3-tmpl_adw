@@ -32,12 +32,6 @@ node {
 	download = true
 }
 
-project.ext.set(
-	'libraryVersions', [
-	fontAwesome: '4.2.0',
-	twbs       : '3.3.2'
-])
-
 FileCollection buildDirectories = files([
 	'Build/logs',
 	'Build/lib',
@@ -53,11 +47,9 @@ FileCollection generatedFiles = files([
 	jsDestDir + '/production.sourcemap.json'
 ])
 
-
 task wrapper(type: Wrapper) {
 	gradleVersion = '2.2'
 }
-
 
 repositories {
 	mavenCentral()

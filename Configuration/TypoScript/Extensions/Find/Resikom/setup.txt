@@ -35,6 +35,7 @@ plugin.tx_find {
 				id = default
 				query = %s
 				type = Text
+				noescape = 1
 				autocomplete = 1
 				autocompleteDictionary = suggest
 			}
@@ -88,15 +89,19 @@ plugin.tx_find {
 			}
 			20 {
 				id = author
+				query = author_facet:"%s"
 				field = author_facet
 				sortOrder = count
+
 			}
 			30 {
 				id = hofinhaber
+				query = hofinhaber_facet:"%s"
 				field = hofinhaber_facet
 			}
 			40 {
 				id = article
+				query = title_facet:"%s"
 				field = title_facet
 			}
 			50 >
