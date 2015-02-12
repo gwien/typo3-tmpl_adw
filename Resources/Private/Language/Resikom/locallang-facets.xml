@@ -17,6 +17,7 @@
 			<label index="facet.typ">Type</label>
 			<label index="facet.author">Author</label>
 			<label index="facet.article">Article</label>
+			<label index="facet.id">Handbuch</label>
 			<label index="facet.id.handbuch1">Handbuch I</label>
 			<label index="facet.id.handbuch2">Handbuch II</label>
 			<label index="facet.id.handbuch3">Handbuch III</label>

@@ -60,32 +60,8 @@ plugin.tx_find {
 			# at the end of the file.
 			10 {
 				id = id
-				excludeOwnFilter = 1
-				type = Tabs
 				field = book
-				hidden = 1
-
-				selectedByDefault {
-					handbuch1 = 1
-				}
-				facetQuery {
-					10 {
-						id = handbuch1
-						query = book:I
-					}
-					20 {
-						id = handbuch2
-						query = book:II
-					}
-					30 {
-						id = handbuch3
-						query = book:III
-					}
-					40 {
-						id = handbuch4
-						query = book:IV
-					}
-				}
+				query = book:"%s"
 			}
 			20 {
 				id = author

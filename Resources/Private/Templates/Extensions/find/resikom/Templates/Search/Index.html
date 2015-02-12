@@ -10,20 +10,8 @@
 			{config.pageTitle}
 		</s:page.title>
 
-		<s:data.newArray name="formFacetsInnerArray"
-		                 keys="{0:'{s:data.valueForKey(array:\"{s:data.arrayFirst(array:config.activeFacets.typ)}\", key:\"term\")}'}"
-							values="{0:1}"
-		>
-		<s:data.newArray name="formFacets" keys="{0:'typ'}" values="{0:formFacetsInnerArray}">
-			<f:render partial="Page/Standard" arguments="{_all}"/>
-		</s:data.newArray>
-		</s:data.newArray>
+		<f:render partial="Page/Standard" arguments="{_all}"/>
 
-		<f:if condition="{arguments.facet.typ.wort}">
-			<p class="searchNote">
-				<f:translate key="LLL:{settings.languageRootPath}locallang-edfu.xml:WL Suchnotiz"/>
-			</p>
-		</f:if>
 		<div class="results">
 			<f:render partial="Form/Form" arguments="{_all}"/>
 		</div>
@@ -40,17 +28,6 @@
 			</div>
 	</div>
 
-	<div class="grid_16">
-			<section class="facets-typ">
-				<f:render
-						partial="Facets/Facet"
-						arguments="{
-											facetData: '{s:data.valueForKey(array:results.components.facetset.facets, key:config.facets.10.id)}',
-																facetInfo: config.facets.10,
-																config:config
-																			}"/>
-			</section>
-	</div>
 	<div class="grid_16">
 		<div class="grid_11">
 			<ol id="c{config.uid}-resultList" class="resultList" start="{config.counterStart}">
