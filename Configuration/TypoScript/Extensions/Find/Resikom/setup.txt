@@ -21,7 +21,7 @@ plugin.tx_find {
 			# Use a long 20 second timeout for Solr queries.
 			timeout = 20
 		}
-		defaultQuery = *:*
+		defaultQuery = *:* AND type:article
 
 		additionalFilters >
 
@@ -33,7 +33,7 @@ plugin.tx_find {
 			# Main query field,
 			0 {
 				id = default
-				query = %s
+				query = %s AND type:article
 				type = Text
 				noescape = 1
 				autocomplete = 1
