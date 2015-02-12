@@ -18,7 +18,7 @@ var config = {
 	autoprefixer: {
 		browsers: [
 			'last 2 versions',
-			'safari 5',
+			'safari 6',
 			'ie 9',
 			'opera 12.1',
 			'ios 6',
