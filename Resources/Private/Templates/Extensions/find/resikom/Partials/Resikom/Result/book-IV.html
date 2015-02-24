@@ -1,6 +1,7 @@
 {namespace s=Subugoe\Find\ViewHelpers}
 <div class="panel-heading">
 	<h1>{document.article-title}</h1>
+	<h2>{document.subArticle-title}</h2>
 </div>
 <div class="panel-body">
 	<f:format.crop maxCharacters="200"><f:format.stripTags>{document.content -> f:format.raw()}</f:format.stripTags></f:format.crop>
