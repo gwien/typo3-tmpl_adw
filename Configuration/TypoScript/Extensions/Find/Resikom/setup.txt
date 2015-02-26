@@ -62,6 +62,7 @@ plugin.tx_find {
 				id = id
 				field = book
 				query = book:"%s"
+				sortOrder = index
 			}
 			20 {
 				id = author
