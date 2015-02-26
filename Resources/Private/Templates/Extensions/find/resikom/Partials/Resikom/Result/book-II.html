@@ -1,9 +1,9 @@
 {namespace s=Subugoe\Find\ViewHelpers}
 <div class="panel-heading">
-	<h1>{document.image_name}</h1>
+	<h1>{document.article-title}</h1>
 </div>
 <div class="panel-body">
-	<f:format.crop maxCharacters="200">{document.image_caption -> f:format.raw()}</f:format.crop>
+	<f:format.crop maxCharacters="200">{document.content -> f:format.raw()}</f:format.crop>
 	<p>
 	<f:link.action
 			action="detail"
