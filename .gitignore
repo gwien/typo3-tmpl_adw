@@ -28,3 +28,5 @@ Resources/Public/JavaScript/Polymer
 Resources/Public/JavaScript/bootstrap.min.js
 
 Build/ScssReport.xml
+Resources/Private/JavaScript/bootstrap.js
+Resources/Private/JavaScript/jasny-bootstrap.js
