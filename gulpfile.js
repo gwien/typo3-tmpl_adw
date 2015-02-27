@@ -13,8 +13,8 @@ var config = {
 	paths: {
 		sass: ['./Resources/Private/Scss/**/*.scss', './Resources/Private/Scss/*.scss', '!./Resources/Private/Scss/vendors/**/*.scss'],
 		fonts: ['./Build/bower/fontawesome/fonts/*'],
-		bootstrap: ['./Build/bower/bootstrap-sass-twbs/assets/'],
-		bootstrapoffcanvas: ['./Build/bower/jasny-bootstrap/dist/']
+		bootstrap: './Build/bower/bootstrap-sass-twbs/assets/',
+		bootstrapoffcanvas: './Build/bower/jasny-bootstrap/dist/'
 	},
 	autoprefixer: {
 		browsers: [
@@ -64,12 +64,8 @@ gulp.task('watch', function () {
 	gulp.watch(config.paths.sass, ['lint', 'compile'])
 });
 
-gulp.task('bower', function () {
-	return bower()
-		.pipe(gulp.dest('Build/bower/'))
-});
 
-gulp.task('uglify', function () {
+gulp.task('uglify', ['bower', 'copy-bootstrap-js', 'copy-offcanvas'], function () {
 	gulp.src('Resources/Private/JavaScript/*.js')
 		.pipe(concat('production.js'))
 		.pipe(uglify())
@@ -78,14 +74,20 @@ gulp.task('uglify', function () {
 });
 
 gulp.task('copy-bootstrap-js', function () {
-	return gulp.src(config.paths.bootstrap + 'javascripts/bootstrap.min.js')
-		.pipe(gulp.dest('Resources/Public/JavaScript/'));
+	return gulp.src(config.paths.bootstrap + 'javascripts/bootstrap.js')
+		.pipe(gulp.dest('Resources/Private/JavaScript/'));
 });
 
 gulp.task('copy-offcanvas', function() {
 	return gulp.src(config.paths.bootstrapoffcanvas + 'js/jasny-bootstrap.js')
 		.pipe(gulp.dest('Resources/Private/JavaScript/'));
 });
+
+gulp.task('bower', function () {
+	return bower()
+		.pipe(gulp.dest('Build/bower/'))
+});
+
 
 gulp.task('copy-fonts', function () {
 	return gulp.src(config.paths.fonts)
