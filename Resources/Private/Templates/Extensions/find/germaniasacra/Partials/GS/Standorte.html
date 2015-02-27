@@ -6,9 +6,9 @@
 	The town name and diocese are linked to searches showing all monasteries
 	with the same town name or diocese respectively.
 </f:comment>
-<section class="lage grid_12">
+<section class="lage grid_16">
 	<h2 class="grid_3">Lage</h2>
-	<ol class="grid_8">
+	<ol class="grid_11">
 		<s:data.transpose name="standorte" arrays="{
 			name: \"{s:find.highlightField(field:'ort', document:document, results:results)}\",
 			nameOriginal: document.ort,
@@ -44,10 +44,7 @@
 									class="internal"
 									title="Alle Klöster in {standort.nameOriginal} zeigen."
 								>
-									{f:format.raw(value:standort.name)}</f:link.action></s:data.newArray></span>{f:if(condition:standort.wuestung, then:' <span class="wuestung">(Wüstung)</span>')}
-						<f:if condition="{document.bemerkung_standort.0} != ''">
-							({document.bemerkung_standort.0})
-						</f:if>,
+									{f:format.raw(value:standort.name)}</f:link.action></s:data.newArray></span>{f:if(condition:standort.wuestung, then:' <span class="wuestung"> (Wüstung)</span>')}<f:if condition="{document.bemerkung_standort.0} != ''"> ({document.bemerkung_standort.0})</f:if>,
 						<span class="land">{f:format.raw(value:standort.land)},</span>
 
 						<span class="bistum">

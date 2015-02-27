@@ -1,0 +1,14 @@
+{namespace s=Subugoe\Find\ViewHelpers}
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="panel-title"><h3>Handbuch {document.book}</h3></div>
+	</div>
+	<div class="panel-body">
+		Autor: {document.author}<br/>
+		{document.book-title}, S. {document.page-from} - {document.page-to}
+		<h4>Abschnitt</h4>
+		<span class="section-title">{document.section-title}</span>
+	</div>
+</div>
+
+<f:render partial="Resikom/Detail/Metadata" arguments="{document: document}" />

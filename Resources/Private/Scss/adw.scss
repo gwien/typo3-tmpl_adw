@@ -1,8 +1,8 @@
-@import 'compass/css3/images';
-@import 'compass/css3/hyphenation';
+@import '../../../Build/bower/bootstrap-sass-twbs/assets/stylesheets/bootstrap';
 @import '_Includes/Settings';
 @import '_Includes/h5bp';
 @import '_Includes/Base';
+@import '_Includes/Grid';
 @import '_Includes/csc';
 @import '_Includes/Breadcrumb';
 @import '_Includes/Navigation';
@@ -10,50 +10,55 @@
 @import '_Includes/_Extensions/WtDirectory';
 @import '_Includes/_Extensions/Solr';
 @import '_Includes/_Extensions/Pagebrowse';
-@import '_Includes/_Extensions/DSpaceConnect';
 @import '_Includes/_Extensions/News';
 @import '_Includes/_Extensions/Find';
 @import '_Includes/_Extensions/Bib';
+@import '_Includes/_Extensions/_Projects/resikom';
+@import '_Includes/_Extensions/_Projects/edfu';
+@import '_Includes/_Extensions/XmlInclude';
 @import '_Includes/Print';
 @import '_Includes/tool_mode';
-
 @import '_Includes/Fancybox';
-@import '_Includes/960';
-@import '_Includes/_FontAwesome/font-awesome';
+@import '../../../Build/bower/fontawesome/scss/font-awesome';
 
-$fa-font-path: "../Fonts";
-
-/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+$fa-font-path: '../Fonts';
+$search-gradient-start: #ac001e;
+$search-gradient-end: #a20019;
 
 .top-container {
+	@extend .container-fluid;
 	background-color: $link-color;
-	background: -moz-linear-gradient(top, $link-color 0%, #ac001e 95%, #a20019 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $link-color), color-stop(95%, #ac001e), color-stop(100%, #a20019));
-	background: -webkit-linear-gradient(top, $link-color 0%, #ac001e 95%, #a20019 100%);
-	background: -o-linear-gradient(top, $link-color 0%, #ac001e 95%, #a20019 100%);
-	background: -ms-linear-gradient(top, $link-color 0%, #ac001e 95%, #a20019 100%);
 	background: linear-gradient(top, $link-color 0%, #ac001e 95%, #a20019 100%);
 	height: 39px;
 }
 
-.main {
-	background: #f9f9f5 url($image-path + "noise1.png") repeat;
-	min-height: 100%;
-	/*temp*/
+body {
+	background: #f9f9f5 url($image-path + 'noise1.png') repeat;
 }
 
-.container_16 {
-	position: relative;
+.main {
+	@extend .container;
+	min-height: 100%;
+	max-width: 970px;
+}
+
+.header {
+	.teaser-head {
+		@extend .hidden-xs;
+	}
+
+	.logo {
+		@include make-xs-column(6);
+	}
+}
+
+.logo_dini {
+	@extend .hidden-xs;
 }
 
 .search {
 	background-color: $link-color;
-	background: url($image-path + "search-devider.png"), -moz-linear-gradient(top, $link-color 0%, #ac001e 95%, #a20019 100%);
-	background: url($image-path + "search-devider.png"), -webkit-gradient(linear, left top, left bottom, color-stop(0%, $link-color), color-stop(95%, #ac001e), color-stop(100%, #a20019));
-	background: url($image-path + "search-devider.png"), -webkit-linear-gradient(top, $link-color 0%, #ac001e 95%, #a20019 100%);
-	background: url($image-path + "search-devider.png"), -o-linear-gradient(top, $link-color 0%, #ac001e 95%, #a20019 100%);
-	background: url($image-path + "search-devider.png"), -ms-linear-gradient(top, $link-color 0%, #ac001e 95%, #a20019 100%);
-	background: url($image-path + "search-devider.png"), linear-gradient(to bottom, $link-color 0%, #ac001e 95%, #a20019 100%);
+	background: url($image-path + 'search-devider.png'), linear-gradient(to bottom, $link-color 0%, $search-gradient-start 95%, $search-gradient-end 100%);
 	background-repeat: no-repeat;
 	background-position: 0 50%;
 	height: 39px;
@@ -61,59 +66,74 @@ $fa-font-path: "../Fonts";
 	right: 60px;
 	top: 0;
 	width: 130px;
+
 	a {
-		background: transparent url($image-path + "ico-sprite-search.png") no-repeat 55% 8px;
+		background: transparent url($image-path + 'ico-sprite-search.png') no-repeat 55% 8px;
 		display: block;
 		line-height: 19px;
 		padding: 10px 0 10px 2px;
 		text-indent: -9999px;
 		width: 37px;
-		&:hover, &:active, &:focus {
+
+		&:hover,
+		&:active,
+		&:focus {
 			background-position: 55% -41px;
 		}
+
 	}
 }
 
 .logo {
 	margin: 3em 0;
+
 	a {
 		display: block;
 	}
+
 }
 
 .headlines {
 	h1 {
-		margin: 40px 0 0 0;
+		margin: 40px 0 0;
 		line-height: 120%;
 	}
-	p.header_title {
+
+	.header_title {
 		color: #ca0030;
 		font: bold 16px / 1.2 Cambria, Georgia, serif;
+		margin-bottom: 0 !important;
+		margin-top: 16px;
 	}
+
 	.subtitle {
 		color: #282828;
 		font: normal 18px / 1.4 Cambria, Georgia, serif;
-		margin: 0 0 0 0;
+		margin: 0;
 	}
-	p.subheader {
+
+	.subheader {
 		color: #282828;
 		font: bold 13px / 1.2 Helvetica, Arial, sans-serif;
 		margin: 0;
 	}
+
 }
 
 p {
 	&.subline {
 		color: #282828;
-		font: bold 0.813em / 1.2 Helvetica, Arial, sans-serif;
+		font: bold .813em / 1.2 Helvetica, Arial, sans-serif;
 	}
+
 	&.back {
 		border-top: 1px solid #fff;
 		border-bottom: 1px solid #aaa;
 		margin: 0;
 		padding: 0;
+
 		a {
-			background: transparent url($image-path + "arrow-left.png") no-repeat 0 50%;
+			background: transparent url($image-path + 'arrow-left.png') no-repeat 0 50%;
 			border-bottom: 1px solid #fff;
 			border-top: 1px solid #aaa;
 			color: #282828;
@@ -121,9 +141,13 @@ p {
 			font: 1em / 24px Georgia, Helvetica, Arial, sans-serif;
 			padding: 11px 0 11px 18px;
 			text-decoration: none;
-			&:hover, &:active, &:focus {
-				background-color: rgba(201, 2, 48, 0.05);
+
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: rgba(201, 2, 48, .05);
 			}
+
 		}
 	}
 }
@@ -132,9 +156,11 @@ p {
 	.subline {
 		color: $link-color;
 	}
+
 	h1 {
 		margin: 75px 0 40px;
 	}
+
 }
 
 .js-off .globalsearch {
@@ -143,71 +169,76 @@ p {
 
 .search-block {
 	border-radius: 16px;
-	-moz-border-radius: 16px;
-	-webkit-border-radius: 16px;
-	-webkit-box-shadow: 0 5px 5px -5px black inset;
-	-moz-box-shadow: 0 5px 5px -5px black inset;
 	box-shadow: 0 5px 5px -5px black inset;
 	background-color: #fff;
 	border: 1px solid #8b001a;
 	margin: 6px 8px;
+
 	input {
 		background: none;
-		border: none;
+		border: 0;
 		color: #666;
-		font-size: 0.813em;
+		font-size: .813em;
 		margin: 0 5px;
 		padding: 6px 4px 2px;
 		width: 58px;
 	}
+
 	.search-submit {
-		background: transparent url($image-path + "ico-sprite-search.png") no-repeat 50% -100px;
+		background: transparent url($image-path + 'ico-sprite-search.png') no-repeat 50% -100px;
 		display: inline-block;
 		padding: 0;
 		text-indent: -9999px;
 		width: 20px;
 		height: 20px;
 	}
+
 }
 
 .teaser-head {
-	background: transparent url($image-path + "teaser-head-bg_mini.png") no-repeat;
+	background: transparent url($image-path + 'teaser-head-bg_mini.png') no-repeat;
 	padding: 15px 25px 40px;
-	width: 128px;
-	height: 137px;
+	width: 185px;
 	overflow: hidden;
+	height: 200px;
+
 	h2 {
-		padding: 0 0 10px 0;
+		padding: 0 0 10px;
 		font: italic normal 1em / 1 Georgia, serif !important;
-		letter-spacing: 0.01em;
+		letter-spacing: .01em;
 		margin: 0 !important;
 		text-align: center;
 	}
+
 	p {
-		font: italic normal 1em / 1 Georgia, serif !important;
-		letter-spacing: 0.01em;
+		letter-spacing: .01em;
 		margin: 0 !important;
 		text-align: center;
 		font: italic 13px / 15px Georgia, serif !important;
 	}
+
 	a {
 		font: italic 13px / 15px Georgia, serif !important;
 	}
+
 }
 
 .content {
 	margin: 0 0 2em;
+
 	hr {
 		clear: both;
 		border-top: 1px solid #fff;
 		border-bottom: 1px solid #aaa;
 	}
+
 }
 
 .column-linklist {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
+
 	li {
 		border-top: 1px solid #fff;
 		border-bottom: 1px solid #aaa;
@@ -215,70 +246,95 @@ p {
 		width: 31%;
 		margin: 0 0 0 3.5%;
 		padding: 0;
-		-webkit-box-shadow: 0 1px 0 white, 0 -1px 0 #aaaaaa;
-		-moz-box-shadow: 0 1px 0 white, 0 -1px 0 #aaaaaa;
-		box-shadow: 0 1px 0 white, 0 -1px 0 #aaaaaa;
+		box-shadow: 0 1px 0 white, 0 -1px 0 #aaa;
+
 		&:first-child {
 			margin: 0;
 		}
+
 	}
+
 	a {
-		background: transparent url($image-path + "arrow-right.png") no-repeat 100% 50%;
+		background: transparent url($image-path + 'arrow-right.png') no-repeat 100% 50%;
 		color: #282828;
 		display: block;
 		padding: 11px 18px 11px 0;
 		font: 1em / 1.2 Cambria, Georgia, serif;
 		line-height: 22px;
 		text-decoration: none;
-		&:hover, &:active, &:focus {
-			background-color: rgba(201, 2, 48, 0.05);
+
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: rgba(201, 2, 48, .05);
 		}
+
 	}
 }
 
 .aside {
-	h1, h2, h3, h4, h5, h6 {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 		font: bold 1em / 1.3 Helvetica, Arial, sans-serif;
-		margin: 0.5em 0;
+		margin: .5em 0;
 	}
-	p, ol, ul, li, address {
-		font: 0.813em / 1.3 Helvetica, Arial, sans-serif;
+
+	p,
+	ol,
+	ul,
+	li,
+	address {
+		font: .813em / 1.3 Helvetica, Arial, sans-serif;
 		margin: 1em 0;
 	}
+
 	li {
 		margin: 0;
 		font: 1em / 1.3 Helvetica, Arial, sans-serif;
 	}
+
 	hr {
 		margin: 1.5em 0;
+
 		&:first-child {
 			margin: 0 0 1.5em;
 		}
+
 	}
+
 }
 
 .footer {
 	color: #999;
 	text-align: center;
 	padding: 2em 0 4em;
+
 	ul {
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
 		text-align: center;
 	}
+
 	li {
 		border-left: 1px solid #999;
 		display: inline;
-		font-size: 0.813em;
+		font-size: .813em;
+
 		&:first-child {
-			border-left: none;
+			border-left: 0;
 		}
 	}
+
 	a {
 		color: #999;
 		padding: 0 5px 0 8px;
 	}
+
 }
 
 .textleft {
@@ -302,41 +358,49 @@ p {
 }
 
 .lof-slider_5 {
+
 	.lof-main-outer {
 		.lof-next {
-			background: transparent url($image-path + "arrow-right-white.png") no-repeat right center;
+			background: transparent url($image-path + 'arrow-right-white.png') no-repeat right center;
 			right: 16px;
 		}
+
 		.lof-previous {
-			background: transparent url($image-path + "arrow-left-white.png") no-repeat left center;
+			background: transparent url($image-path + 'arrow-left-white.png') no-repeat left center;
 			left: 16px;
 		}
+
 	}
+
 	.lof-css3 {
-		-webkit-box-shadow: none;
-		-moz-box-shadow: none;
 		box-shadow: none;
 	}
+
 	.lof-description_black h3 {
-		font: 0.813em / 1.2 Helvetica, Arial, sans-serif;
+		font: .813em / 1.2 Helvetica, Arial, sans-serif;
 		color: #fff;
 		text-decoration: none;
+
 		a {
-			font: 0.813em / 1.2 Helvetica, Arial, sans-serif;
+			font: .813em / 1.2 Helvetica, Arial, sans-serif;
 			color: #fff;
 			text-decoration: none;
+
 			&:visited {
-				font: 0.813em / 1.2 Helvetica, Arial, sans-serif;
+				font: .813em / 1.2 Helvetica, Arial, sans-serif;
 				color: #fff;
 				text-decoration: none;
 			}
+
 			&:hover {
 				color: #fff;
 				text-decoration: underline;
 			}
 		}
 	}
-	.lof-description_white h3 a:hover, .lof-description_nobg h3 a:hover {
+
+	.lof-description_white h3 a:hover,
+	.lof-description_nobg h3 a:hover {
 		color: #fff;
 		text-decoration: underline;
 	}
@@ -355,16 +419,17 @@ p {
 
 .rss-feed {
 	line-height: 120%;
+
 	a {
 		font-size: 80%;
 	}
+
 	img {
-		margin: -2px 0px 0px 0px !important;
-		padding: none !important;
-		-webkit-box-shadow: none !important;
-		-moz-box-shadow: none !important;
+		margin: -2px 0 0 !important;
+		padding: 0 !important;
 		box-shadow: none !important;
 	}
+
 }
 
 .teaser-logo {
@@ -372,11 +437,11 @@ p {
 }
 
 .align-justify {
-	@include word-break(break-word);
-	@include hyphens(auto);
+	word-break: break-all;
+	hyphens: auto;
 	text-align: justify;
 }
 
 table {
-	font: 1em/22px Cambria,Georgia,serif;
+	font: 1em/22px Cambria, Georgia, serif;
 }

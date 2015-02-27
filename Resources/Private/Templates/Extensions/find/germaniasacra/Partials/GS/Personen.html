@@ -9,7 +9,7 @@
 	of the person information (complete/incomplete) is also displayed.
 </f:comment>
 <f:if condition="{document.person_name}">
-	<section class="person grid_12">
+	<section class="person grid_16">
 		<h2 class="grid_3">
 			<f:if condition="{f:count(subject:document.person_name)} == 1">
 				<f:then>Person</f:then>
@@ -17,7 +17,7 @@
 			</f:if>
 		</h2>
 
-		<div class="grid_8">
+		<div class="grid_11">
 
 		<p>{document.personallistenstatus.0}</p>
 		<s:data.transpose name="personen" arrays="{

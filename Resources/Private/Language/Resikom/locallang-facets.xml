@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>
+			Language labels for facet content.
+			The file »locallang-facets.xml« will be loaded from the path set as
+			»view.languageRootPath« in TypoScript.
+
+			Localisation keys / label indexes follow the convention:
+				* facet name for index FOO: facet.FOO
+				* facet name for value BAR in index FOO: facet.FOO.BAR
+		</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="facet.typ">Type</label>
+			<label index="facet.author">Author</label>
+			<label index="facet.article">Article</label>
+			<label index="facet.id">Handbuch</label>
+			<label index="facet.id.handbuch1">Handbuch I</label>
+			<label index="facet.id.handbuch2">Handbuch II</label>
+			<label index="facet.id.handbuch3">Handbuch III</label>
+			<label index="facet.id.handbuch4">Handbuch IV</label>
+		</languageKey>
+
+		<languageKey index="de" type="array">
+			<label index="facet.typ">Typ</label>
+			<label index="facet.author">Autor</label>
+			<label index="facet.article">Artikel</label>
+			<label index="facet.id.handbuch1">Handbuch I</label>
+			<label index="facet.id.handbuch2">Handbuch II</label>
+			<label index="facet.id.handbuch3">Handbuch III</label>
+			<label index="facet.id.handbuch4">Handbuch IV</label>
+		</languageKey>
+	</data>
+</T3locallang>

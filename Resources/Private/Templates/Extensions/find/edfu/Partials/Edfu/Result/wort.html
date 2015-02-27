@@ -1,42 +1,46 @@
 {namespace s=Subugoe\Find\ViewHelpers}
-<h1>
-	<span class="technical">
-		<f:render partial="Edfu/BandSeiteZeile" arguments="{_all}"/>
-	</span>
-	<f:render partial="Display/Field/Inline" arguments="{results:results, document:document, field:'transliteration', separator:', '}"/>
-	<f:render partial="Display/Field/Inline" arguments="{results:results, document:document, field:'berlin_display', separator:', ', prefixString:' – Wb '}"/>
-</h1>
-<p>
-	<f:if condition="{s:find.pathExists(path:'fileadmin/edfu-data/WL/WL{document.fields.hieroglyph}.svg')}">
-		<img src="fileadmin/edfu-data/WL/WL{document.fields.hieroglyph}.svg" type="image/svg+xml" alt="{f:translate(key:'LLL:{settings.languageRootPath}locallang-edfu.xml:Hieroglyph')}" class="hieroglyph">
-	</f:if>
-	<f:render partial="Display/Field/Inline" arguments="{results:results, document:document, field:'uebersetzung', separator:', '}"/>
-	<f:if condition="{document.fields.weiteres}">
-		/
-		<f:render partial="Display/Field/Inline" arguments="{results:results, document:document, field:'weiteres', separator:', '}"/>
-	</f:if>
-	<f:if condition="{document.fields.anmerkung}">
-		<span class="field-anmerkung">
-			—
-			<f:render partial="Edfu/AnmerkungItem" arguments="{results:results, document:document, field:'anmerkung'}"/>
+<div class="panel-heading">
+	<h1>
+		<span class="technical">
+			<f:render partial="Edfu/BandSeiteZeile" arguments="{_all}"/>
 		</span>
-	</f:if>
-<p>
-	<f:link.action
-		action="detail"
-		arguments="{id:document.id}"
-		section="{settings.jumpToID}"
-		noCacheHash="1"
-		class="details internal no-change"
-		onclick="{f:if(
-			condition:'{settings.paging.detailPagePaging == 1}',
-			then:'return tx_find.detailViewWithPaging(this);'
-		)}"
-	>
+		<f:render partial="Display/Field/Inline" arguments="{results:results, document:document, field:'transliteration', separator:', '}"/>
+		<f:render partial="Display/Field/Inline" arguments="{results:results, document:document, field:'berlin_display', separator:', ', prefixString:' – Wb '}"/>
+	</h1>
+</div>
+<div class="panel-body">
+	<p>
+		<f:if condition="{s:find.pathExists(path:'fileadmin/edfu-data/WL/WL{document.fields.hieroglyph}.svg')}">
+			<img src="fileadmin/edfu-data/WL/WL{document.fields.hieroglyph}.svg" type="image/svg+xml" alt="{f:translate(key:'LLL:{settings.languageRootPath}locallang-edfu.xml:Hieroglyph')}" class="hieroglyph">
+		</f:if>
+		<f:render partial="Display/Field/Inline" arguments="{results:results, document:document, field:'uebersetzung', separator:', '}"/>
+		<f:if condition="{document.fields.weiteres}">
+			/
+			<f:render partial="Display/Field/Inline" arguments="{results:results, document:document, field:'weiteres', separator:', '}"/>
+		</f:if>
+		<f:if condition="{document.fields.anmerkung}">
+			<span class="field-anmerkung">
+				—
+				<f:render partial="Edfu/AnmerkungItem" arguments="{results:results, document:document, field:'anmerkung'}"/>
+			</span>
+		</f:if>
 		<p>
-			<i class="fa fa-chevron-right"></i>
-			<f:translate key="Show Detail Page"/>
+			<f:link.action
+				action="detail"
+				arguments="{id:document.id}"
+				section="{settings.jumpToID}"
+				noCacheHash="1"
+				class="details internal no-change"
+				onclick="{f:if(
+					condition:'{settings.paging.detailPagePaging == 1}',
+					then:'return tx_find.detailViewWithPaging(this);'
+				)}"
+			>
+				<p>
+					<i class="fa fa-chevron-right"></i>
+					<f:translate key="Show Detail Page"/>
+				</p>
+			</f:link.action>
 		</p>
-	</f:link.action>
-</p>
-</p>
+	</p>
+</div>

@@ -8,8 +8,8 @@
 
 .. _style_guideline:
 
-Style-Guideline
-====================
+11 Style-Guideline
+==================
 
 In der vorliegenden Style Guideline finden Sie Hinweise zur redaktionellen Bearbeitung der AdW-Website.
 

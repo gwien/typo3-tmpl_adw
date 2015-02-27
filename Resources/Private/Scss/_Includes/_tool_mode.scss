@@ -3,43 +3,46 @@
 }
 
 .tool-mode__pagenav ul {
-	margin-top: 0px;
-	padding: 15px 15px 0 15px;
+	margin-top: 0;
+	padding: 15px 15px 0;
 	position: absolute;
 	z-index: 9999;
-	background-color: green;
 	display: none;
 	background-color: white;
 	border: 1px solid $link-color;
-	border-top: none;
+	border-top: 0;
+
 	li {
+		list-style-type: none;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #aaa;
+		margin: 0 0 10px;
+
 		a {
 			color: #282828;
 			display: block;
 		}
-		list-style-type: none;
-		padding-bottom: 10px;
-		border-bottom: 1px solid #AAAAAA;
-		margin: 0;
-		margin-bottom: 10px;
-	}
-	li:last-child {
-		border-bottom: none;
-		padding-bottom: none;
+
+		&:last-child {
+			border-bottom: 0;
+			padding-bottom: 0;
+		}
 	}
 }
 
 .tool-mode__menubutton {
 	display: block;
 	width: 100%;
-	&:active {
-		color: white;
-	}
 	color: white;
 	height: 39px;
 	vertical-align: middle;
 	background: none;
-	border: none;
+	border: 0;
+
+	&:active {
+		color: white;
+	}
+
 }
 
 .tool-mode .content .csc-default:first-child h2 {

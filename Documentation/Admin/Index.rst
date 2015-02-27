@@ -8,8 +8,8 @@
 
 .. _admin:
 
-Administrator Handbuch
-======================
+12 Administrator Handbuch
+=========================
 
 
 
@@ -21,3 +21,4 @@ Administrator Handbuch
 
     	Template/Index
     	Benutzer/Index
+    	ResDoctae/Index

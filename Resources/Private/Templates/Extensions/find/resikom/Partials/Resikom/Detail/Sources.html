@@ -1,0 +1,10 @@
+<f:if condition="{document.sources}">
+	<section class="sources">
+		<h1 class="head"><f:link.page additionalAttributes="{data-toggle: 'collapse'}" section="sources-{document.id}">Quellen</f:link.page></h1>
+		<f:for each="{document.sources}" as="source">
+			<div class="collapse" id="sources-{document.id}">
+				<div class="content-blob">{source -> f:format.raw()}</div>
+			</div>
+		</f:for>
+	</section>
+</f:if>

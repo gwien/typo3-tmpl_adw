@@ -1,4 +1,4 @@
-﻿.. ==================================================
+.. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
@@ -9,29 +9,35 @@
 .. _start:
 
 =============================================================
-AdW Handbuch
+Handbuch für das AdW-Portal
 =============================================================
 
 .. only:: html
 
 	:Version:
-		|release|
+			|release|
 
-	:Author:
-		Daniel Beucke
+	:Autoren:
+			Daniel Beucke, Ruth Welzel
 
-	:Email:
-		beucke@sub.uni-goettingen.de
+	:E-Mail:
+			beucke@sub.uni-goettingen.de, welzel@sub.uni-goettingen.de
 
-	:License:
-		This document is published under the Open Content License
-		available from http://www.opencontent.org/opl.shtml
+	:Lizenz:
+			This work is licensed under a Creative Commons Attribution Non Commercial Share Alike 3.0 License.
+			Dieses Werk ist lizenziert unter einer Creative Commons Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 3.0 Deutschland Lizenz.
 
 	:Rendered:
-		|today|
+			|today|
+			
+	:Hinweis:
+			Diese Einführung ist auf Grundlage von "TYPO3 Version 4 Einführung für Web-Autoren" der Universität für Bodenkultur Wien, 2008 von Hubert Partl (Zentraler Informatikdienst, Universität für Bodenkultur Wien) und Tobias Müller-Prothmann (Institut für Publizistik- und Kommunikarionswissenschaften, Freie Universität Berlin) entstanden.
+			Die Texte und Screenshots sind der von der SUB Göttingen an ihre TYPO3-Umgebung angepasst und erweitert worden. Bitte beachten Sie, dass noch nicht alle Screenshots an die TYPO3-Version 6 angepasst worden sind, es kann geringe Abweichungen geben.
+			Die Nutzungsrechte dieser Einführung unterliegen http://creativecommons.org/licenses/by-nc-sa/3.0/de/
+			Alle über die Creative Commons License hinausgehenden Rechte sind den Urhebern vorbehalten.
+			
+			The content of this document is related to TYPO3,a GNU/GPL CMS/Framework available from `www.typo3.org <http://www.typo3.org/>`_.
 
-	The content of this document is related to TYPO3,
-	a GNU/GPL CMS/Framework available from `www.typo3.org <http://www.typo3.org/>`_.
 
 
 	**Inhalt Handbuch**
@@ -50,30 +56,7 @@ AdW Handbuch
 	Slider/Index
 	Panoramaviewer/Index
 	Onlinebibliographie/Index
-
-
-
-**Inhalt Style Guideline**
-
-.. toctree::
-	:maxdepth: 5
-	:titlesonly:
-    	:glob:
-
-    	StyleGuideline/Bilder/Index
-    	StyleGuideline/Dateiablage/Index
-    	StyleGuideline/Links/Index
-    	StyleGuideline/Vorhaben/Index
-    	StyleGuideline/Darstellung/Index
-
-
-**Inhalt Administratoren Handbuch**
-
-.. toctree::
-	:maxdepth: 5
-	:titlesonly:
-     	:glob:
-
-    	Admin/Template/Index
-    	Admin/Benutzer/Index
-    	WerkzeugmodusGS/Index
+	Personendatenbank/Index
+	StyleGuideline/Index
+	Admin/Index
+	WerkzeugmodusGS/Index

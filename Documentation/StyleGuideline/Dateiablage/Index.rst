@@ -8,8 +8,8 @@
 
 .. _dateiablage:
 
-Beschreibung der Dateiablage
-============================
+11.2 Beschreibung der Dateiablage
+=================================
 
 In der Dateiliste befinden sich alle Dokumente, die im Adw-Portal dargestellt und zum Download angeboten werden. Die Struktur sieht wie folgt aus:
 

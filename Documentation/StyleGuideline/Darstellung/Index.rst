@@ -8,8 +8,8 @@
 
 .. _darstellung:
 
-Darstellung
-====================
+11.5 Darstellung
+================
 
 Verwendung der rechten Spalte
 -----------------------------

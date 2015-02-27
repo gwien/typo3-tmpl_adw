@@ -1,12 +1,14 @@
 {namespace s=Subugoe\Find\ViewHelpers}
-<h1>
-	<span class="technical">
-		<f:render partial="Edfu/BandSeiteZeile" arguments="{_all}"/>
-	</span>
-	<f:render partial="Display/Field/Inline" arguments="{results:results, document:document, field:'transliteration', separator:', '}"/>
-	<f:render partial="Display/Field/Inline" arguments="{results:results, document:document, field:'beziehung', separator:', ', prefixString:' – '}"/>
-</h1>
-<div>
+<div class="panel-heading">
+	<h1>
+		<span class="technical">
+			<f:render partial="Edfu/BandSeiteZeile" arguments="{_all}"/>
+		</span>
+		<f:render partial="Display/Field/Inline" arguments="{results:results, document:document, field:'transliteration', separator:', '}"/>
+		<f:render partial="Display/Field/Inline" arguments="{results:results, document:document, field:'beziehung', separator:', ', prefixString:' – '}"/>
+	</h1>
+</div>
+<div class="panel-body">
 	<f:render partial="Display/Field/Inline" arguments="{results:results, document:document, field:'eponym', separator:', '}"/>
 	<f:link.action
 			action="detail"

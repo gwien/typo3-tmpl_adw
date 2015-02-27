@@ -1,0 +1,30 @@
+{namespace s=Subugoe\Find\ViewHelpers}
+{namespace t3jquery=Tx_T3jquery_ViewHelpers}
+<f:layout name="Default"/>
+
+<f:section name="main">
+	<f:alias map="{typFacetArray:'{s:data.newArray(
+		keys:\"{0:document.fields.type}\",
+		values:\"{0:1}\"
+	)}'}">
+
+	</f:alias>
+	<s:page.title>{document.fields.id} – {config.pageTitle}</s:page.title>
+
+	<s:data.newArray
+		name="formFacets"
+		keys="{0:'typ'}"
+		values="{0:'{s:data.newArray(keys:\"{0:document.fields.type}\", values:\"{0:1}\")}'}"
+	>
+		<f:render partial="Page/Standard" arguments="{_all}"/>
+	</s:data.newArray>
+
+	<f:render partial="Components/DetailResultPager" arguments="{_all}"/>
+
+	<article class="detail {document.fields.type}" id="c{config.uid}-record-{document.fields.id}">
+		<f:render partial="Resikom/Detail/book-{document.fields.book}" arguments="{_all}"/>
+	</article>
+	<aside class="sidebar">
+		<f:render partial="Resikom/Detail/book-{document.fields.book}-sidebar" arguments="{_all}"/>
+	</aside>
+</f:section>

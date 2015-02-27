@@ -5,6 +5,8 @@ Build/logs
 Build/pdepend
 Build/lib
 Build/tmp
+Build/bower
+Build/jquery
 Resources/Public/JavaScript/production*.js*
 Resources/Public/Css/adw.css
 Resources/Public/Css/germania-sacra.css
@@ -16,6 +18,15 @@ Resources/Private/Scss/_Includes/_FontAwesome/*
 .idea
 .jruby
 Documentation/_make/build/
+Documentation/index.rst
 *.iml
 
 node_modules
+bower_components
+Resources/Public/JavaScript/Polymer
+!Resources/Public/JavaScript/Polymer/.gitkeep
+Resources/Public/JavaScript/bootstrap.min.js
+
+Build/ScssReport.xml
+Resources/Private/JavaScript/bootstrap.js
+Resources/Private/JavaScript/jasny-bootstrap.js

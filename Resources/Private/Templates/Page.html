@@ -50,7 +50,7 @@
 					<!-- main content end -->
 				</f:then>
 				<f:else>
-					<div class="grid_3 nav" id="menu">
+					<div class="grid_3 nav offcanvas-xs navmenu-fixed-left" id="menu">
 						<!-- main navi -->
 						{MENU -> f:format.raw()}
 						<!-- main navi end -->
@@ -58,7 +58,7 @@
 					</div>
 					<f:if condition="{INFOBOX}">
 						<f:then>
-							<div class="grid_9">
+							<div class="grid_9 main-content">
 								{TRANSLATIONNOTE -> f:format.raw()}
 								<!-- main content -->
 								<!-- TYPO3SEARCH_begin -->

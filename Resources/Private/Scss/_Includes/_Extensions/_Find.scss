@@ -1,16 +1,16 @@
 $current: #000;
 $inactive: #bbb;
-$textInverted: #fff;
-$backgroundActive: #eef;
-$highlight: #FDEE53;
-$highlightBorder: #b00;
+$text-inverted: #fff;
+$background-active: #eef;
+$highlight: #fdee53;
+$highlight-border: #b00;
 $downlight: #666;
-$downlightInverted: #ddd;
-$tabSelected: #263476;
+$downlight-inverted: #ddd;
+$tab-selected: #263476;
 
 // form borders
-$borderA1: #b3b3b3;
-$borderA2: #d2d2d2;
+$border-a1: #b3b3b3;
+$border-a2: #d2d2d2;
 $backgroundA: #f3f5f9;
 $textA: #333;
 $borderB1: #d4d4d4;
@@ -22,12 +22,13 @@ $textB: #555;
 .tx_find {
 
 	aside {
-		margin-top: 26px
+		margin-top: 26px;
 	}
 
 	h2 {
 		margin: 0;
 	}
+
 	.clear {
 		clear: both;
 		display: block;
@@ -45,6 +46,7 @@ $textB: #555;
 		&.detail {
 			clear: both;
 		}
+
 	}
 
 	em {
@@ -57,13 +59,16 @@ $textB: #555;
 		&.error {
 			margin-bottom: 1em;
 			padding: 1em;
-			border: 2px solid $highlightBorder;
+			border: 2px solid $highlight-border;
 		}
+
 		&.linked-data {
 			margin-top: 15px;
+
 			ul {
 				margin-left: 0 !important;
 			}
+
 			li {
 				display: inline;
 			}
@@ -71,7 +76,7 @@ $textB: #555;
 	}
 
 	/* search form */
-	form {
+	.searchForm {
 
 		position: relative;
 		line-height: 150%;
@@ -80,7 +85,6 @@ $textB: #555;
 			.fieldLabel {
 				display: block;
 				float: left;
-				width: 140px;
 				text-align: right;
 				padding-right: 5px;
 			}
@@ -92,9 +96,7 @@ $textB: #555;
 
 			input {
 				padding: 2px;
-				border-color: #C90230;
-				border-style: solid;
-				border-width: 1px;
+				border: 1px solid $adw-red;
 				color: $textA;
 				background: $backgroundA;
 			}
@@ -107,6 +109,7 @@ $textB: #555;
 				position: relative;
 				top: 2px;
 			}
+
 		}
 
 		.field-default {
@@ -117,7 +120,7 @@ $textB: #555;
 			input {
 				width: 100%;
 				height: 30px;
-				margin: 0px 6px 2px 0px;
+				margin: 0 6px 2px 0;
 				padding: 4px;
 				font-size: 100%;
 			}
@@ -136,20 +139,16 @@ $textB: #555;
 			input {
 				width: 6em;
 			}
+
 		}
 
 		.controls {
-			bottom: 0px;
-		}
-
-		.fieldType-search input:-moz-placeholder {
-			color: #999;
+			bottom: 0;
 		}
 
 		.submit {
-			height: 42px;
 			width: 100%;
-			background-color: #C90230;
+			background-color: $adw-red;
 			border-style: solid;
 			border-width: 1px;
 			border-color: $borderB1 $borderB2 $borderB2 $borderB1;
@@ -166,7 +165,7 @@ $textB: #555;
 		}
 
 		.submit:active {
-			background-image: url(Images/button_shade_large_click.png);
+			background-image: url('../Images/button_shade_large_click.png');
 			background-color: $backgroundBActive;
 		}
 
@@ -180,7 +179,7 @@ $textB: #555;
 		}
 
 		a.extendedSearch:hover {
-			background-color: #c90230;
+			background-color: $adw-red;
 			color: white;
 			border: 1px solid #b4b4b4;
 			transition: all .1s ease-in;
@@ -188,7 +187,7 @@ $textB: #555;
 
 		.button-reset-form {
 			border: 1px solid darkgrey;
-			color: #C90230;
+			color: $adw-red;
 			background-color: white;
 			padding: 5px;
 			width: 100%;
@@ -197,19 +196,20 @@ $textB: #555;
 		}
 
 		.button-reset-form:hover {
-				color: white;
-				background-color: #c90230;
-				border: 1px solid #b4b4b4;
-				transition: all .1s ease-in;
+			color: white;
+			background-color: $adw-red;
+			border: 1px solid #b4b4b4;
+			transition: all .1s ease-in;
 		}
 
 		.field-mode-extended {
 			display: none;
 		}
 
-		.sortOrder, .resultCountPicker {
+		.sortOrder,
+		.resultCountPicker {
 			float: right;
-			margin: 5px 0 0 0.5em;
+			margin: 5px 0 0 .5em;
 
 			label {
 				width: auto;
@@ -249,14 +249,17 @@ $textB: #555;
 			li:target {
 				border-radius: 7px;
 			}
+
 		}
 	}
 	.resultList {
 		p {
 			margin: 11px 0;
+
 			i {
-				font-size: 0.8rem;
+				font-size: .8rem;
 			}
+
 		}
 	}
 
@@ -271,18 +274,18 @@ $textB: #555;
 		}
 
 		.facetSearch {
-			margin: 1em 0 0 0;
+			margin: 1em 0 0;
 		}
 
 		ol {
 			list-style-type: none;
-			margin: 1em 0 0 0;
+			margin: 1em 0 0;
 			padding-left: 0;
 			line-height: 150%;
 		}
 
 		ol.autocomplete {
-			margin: 0.5em 0 0 0;
+			margin: .5em 0 0 0;
 		}
 
 		.facetList li {
@@ -310,18 +313,18 @@ $textB: #555;
 		.facetList .facetActive {
 			padding: 0;
 			text-indent: 0;
-			margin-bottom: 0.25em;
+			margin-bottom: .25em;
 		}
 
 		.facetActive {
 			a {
-				padding-left: 0.2em;
+				padding-left: .2em;
 				color: black;
 			}
 
 			a:before {
-				margin-right: 0.3em;
-				margin-left: 0.1em;
+				margin-right: .3em;
+				margin-left: .1em;
 			}
 		}
 
@@ -337,7 +340,7 @@ $textB: #555;
 		}
 
 		.facetHistogram-container .facetActive {
-			margin-bottom: 0.5em;
+			margin-bottom: .5em;
 		}
 
 		.histogram {
@@ -369,21 +372,21 @@ $textB: #555;
 			li {
 				display: inline-block;
 				margin: 0;
-				border: 0px none;
+				border: 0 none;
 
 				a {
-					padding: 0.1em 0.5em 0em 0.5em;
+					padding: .1em .5em 0;
 					display: inline-block;
 				}
 			}
 
 			li.facetActive {
 				@extend li;
-				background-color: #C90230;
-				color: $textInverted;
+				background-color: $adw-red;
+				color: $text-inverted;
 
 				.facetCount {
-					color: $downlightInverted;
+					color: $downlight-inverted;
 				}
 			}
 		}
@@ -392,8 +395,12 @@ $textB: #555;
 	/* page browser list view */
 	.listPager {
 		text-align: center;
-		margin-top: 0.5em;
-		margin-bottom: 0.5em;
+		margin-top: .5em;
+		margin-bottom: .5em;
+
+		.fa {
+			font-size: 40px;
+		}
 
 		* {
 			margin: 0;
@@ -408,7 +415,9 @@ $textB: #555;
 				display: inline;
 
 				a {
-					padding: 0.4em;
+					padding: .4em;
+					background: transparent;
+					border: 0;
 				}
 			}
 		}
@@ -421,14 +430,16 @@ $textB: #555;
 		.resultCount {
 			margin-bottom: 2em;
 		}
+
 	}
 
 	/* result count */
 	.resultCount {
 		text-align: right;
-		margin-top: 0.5em;
-		margin-bottom: 0.5em;
+		margin-top: .5em;
+		margin-bottom: .5em;
 	}
+
 	.noResult {
 		text-align: left;
 	}
@@ -442,11 +453,28 @@ $textB: #555;
 		}
 
 		.resultPager {
-			display: block;
+			@include make-lg-column(16);
+			@extend .pull-right;
+
 			text-align: right;
 
 			.pager {
 				color: $inactive;
+
+				.fa {
+					font-size: 40px
+				}
+
+				&:before {
+					display: inline-block;
+				}
+
+				li {
+					> a {
+						border: none !important;
+						background-color: transparent !important;
+					}
+				}
 
 				.icon-right-dir:before,
 				.icon-left-dir:before {
@@ -469,8 +497,9 @@ $textB: #555;
 	.detail {
 		h1 {
 			margin-bottom: 1em;
-			margin-left: 0px;
+			margin-left: 0;
 		}
+
 	}
 
 	dl {
@@ -482,32 +511,39 @@ $textB: #555;
 	}
 
 	dd {
-		margin: 0.2em 0 1em 2em;
+		margin: .2em 0 1em 2em;
+
 		ul {
 			margin: 0;
 		}
 	}
+
 	#tx_find-histogram-tooltip {
 		display: none;
 		position: absolute;
 		background: #fff;
 	}
+
 	.ui-helper-hidden-accessible {
 		display: none;
 	}
+
 	.person {
 		section {
 			ol {
 				margin: 0;
 			}
+
 		}
+
 		nav {
 			&.aemter {
 				ol {
 					li {
-						margin-right: 0.3rem;
+						margin-right: .3rem;
 					}
 				}
+
 			}
 		}
 	}
@@ -527,4 +563,27 @@ $textB: #555;
 
 .tx_find .searchForm .fieldType-Range input {
 	width: 102px;
+}
+
+.tx_find {
+	.results {
+		.pager {
+			li {
+				> a {
+					border: none !important;
+					background-color: transparent !important;
+				}
+
+			}
+
+			.next,
+			.previous {
+				> a {
+					float: none;
+				}
+
+			}
+
+		}
+	}
 }

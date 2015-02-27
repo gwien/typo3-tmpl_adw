@@ -94,6 +94,17 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = array(
 					),
 				),
 			),
+		),
+	'fixedPostVars' => array(
+			'xmlinclude' => array(
+					array(
+							'GETvar' => 'tx_xmlinclude_xmlinclude[URL]',
+							'userFunc' => 'EXT:xmlinclude/Classes/RealURL/tx_xmlinclude_realurl.php:&tx_xmlinclude_realurl->main'
+					)
+			),
+			'656' => 'xmlinclude',
+			'660' => 'xmlinclude',
+			'635' => 'xmlinclude',
 		)
 	),
 );

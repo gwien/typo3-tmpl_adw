@@ -15,12 +15,7 @@
 	<f:render partial="Components/DetailResultPager" arguments="{_all}"/>
 
 	<article class="detail">
-		<aside class="grid_4">
-			<f:if condition="{document.koordinaten}">
-				<f:render partial="GS/Karte" arguments="{_all}"/>
-			</f:if>
-			<f:render partial="GS/LinkedData" arguments="{_all}"/>
-		</aside>
+
 
 		<div class="main grid_12">
 
@@ -31,9 +26,9 @@
 			<f:render partial="GS/Zitierhinweis" arguments="{_all}"/>
 
 			<f:if condition="{document.patrozinium}">
-				<section class="patrozinium grid_12">
+				<section class="patrozinium grid_16">
 					<h2 class="grid_3">Patrozinium</h2>
-					<p class="grid_8">
+					<p class="grid_11">
 						<f:render partial="Display/Field/General" arguments="{results:results, document:document, field:'patrozinium'}"/>
 					</p>
 				</section>
@@ -44,9 +39,9 @@
 			<f:render partial="GS/Orden" arguments="{_all}"/>
 
 			<f:if condition="{document.bemerkung_kloster.0}">
-				<section class="bemerkung grid_12">
+				<section class="bemerkung grid_16">
 					<h2 class="grid_3">Bemerkung</h2>
-					<p class="grid_8">
+					<p class="grid_11">
 						<f:render partial="Display/Field/General" arguments="{results:results, document:document, field:'bemerkung_kloster'}"/>
 					</p>
 				</section>
@@ -63,5 +58,11 @@
 			<f:render partial="GS/Personen" arguments="{_all}"/>
 
 		</div>
+		<aside class="grid_4">
+			<f:if condition="{document.koordinaten}">
+				<f:render partial="GS/Karte" arguments="{_all}"/>
+			</f:if>
+			<f:render partial="GS/LinkedData" arguments="{_all}"/>
+		</aside>
 	</article>
 </f:section>

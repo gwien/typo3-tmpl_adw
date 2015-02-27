@@ -8,8 +8,8 @@
 
 .. _bilder:
 
-Bilder
-======
+11.1 Bilder
+===========
 
 Bildergalerie
 -------------

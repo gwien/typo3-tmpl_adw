@@ -417,7 +417,7 @@ var leafletMapAddDiverseMarkers = function() {
 							orden[id].coordIds[0].id = id;
 							orden[id].coordIds[0].kloster = docs[index].kloster;
 							orden[id].coordIds[0].ort = docs[index].ort[0];
-							orden[id].coordIds[0].link = "http://"+document.domain + "/" + germaniaSacra.config.IDURLTemplate.replace('%23%23%23ID%23%23%23', id);
+							orden[id].coordIds[0].link = window.location.protocol + "//" + document.domain + "/" + germaniaSacra.config.IDURLTemplate.replace('%23%23%23ID%23%23%23', id);
 							// use graphic of first denomination
 							if (docs[index].orden_graphik) {
 								orden[id].coordIds[0].graphik = kIFolder + docs[index].orden_graphik[0] + ".png";
@@ -458,7 +458,7 @@ var leafletMapAddDiverseMarkers = function() {
 							orden[id].coordIds[coordIndex].id = id;
 							orden[id].coordIds[coordIndex].kloster = docs[index].kloster;
 							orden[id].coordIds[coordIndex].ort = docs[index].ort[0];
-							orden[id].coordIds[coordIndex].link = "http://"+document.domain + "/" + germaniaSacra.config.IDURLTemplate.replace('%23%23%23ID%23%23%23', id);
+							orden[id].coordIds[coordIndex].link = window.location.protocol + "//" + document.domain + "/" + germaniaSacra.config.IDURLTemplate.replace('%23%23%23ID%23%23%23', id);
 
 							// on each site, it can have several denominations with its times and denominations,
 							// here it gets the first one
@@ -648,11 +648,12 @@ var addBordersToMap = function() {
 
 var leafletMapAddMarkerToSmallMap = function() {
 
-	// create array of monastery ids from session storage
-	var internValues = sessionStorage.values.split(" ");
-	internValues.pop();
-	leafletMap.values =  internValues;
-
+	if (typeof(sessionStorage.values) != "undefined") {
+		// create array of monastery ids from session storage
+		var internValues = sessionStorage.values.split(" ");
+		internValues.pop();
+		leafletMap.values = internValues;
+	}
 	// Creation of another layergroup to zoom around
 	leafletMap.markers.detailGroup = L.featureGroup();
 	var icon = resourcesBaseURL + "Ordenssymbole/Kloster_allgemein.png";

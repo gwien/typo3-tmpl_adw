@@ -1,0 +1,143 @@
+.xmlinclude {
+	span {
+		&.bold {
+			font-weight: bold;
+		}
+	}
+
+	.ds-simple-list {
+		@extend .list-group;
+
+		li {
+			@extend .list-group-item;
+		}
+	}
+
+	h1 {
+		&.ds-div-head {
+			display: none;
+		}
+	}
+
+	.ds-interactive-div {
+		display: none;
+	}
+
+	.ds-artifact-list {
+		list-style-type: none;
+		padding-left: 0;
+
+		.ds-artifact-item {
+			@extend .panel;
+			@extend .panel-default;
+
+			.item-wrapper {
+				@extend .panel-body;
+			}
+
+			.thumbnail-wrapper {
+				@extend .pull-right;
+			}
+
+		}
+	}
+
+	h1 {
+		font-size: $font-size-h3;
+	}
+
+	#aspect_artifactbrowser_CollectionViewer_div_collection-home,
+	#aspect_artifactbrowser_CommunityViewer_div_community-search-browse {
+		display: none;
+	}
+
+	.pagination-links {
+		@extend .pager;
+		margin: 0;
+
+		li {
+			> a {
+				@extend .pull-left;
+				border-radius: $border-radius-small;
+			}
+		}
+	}
+
+	#aspect_artifactbrowser_ItemViewer_div_item-view {
+
+		.item-summary-view-metadata {
+			@extend .panel;
+			@extend .panel-default;
+
+			h1,
+			h2,
+			h3 {
+				@extend .panel-heading;
+			}
+
+			div {
+				@extend .panel-body;
+			}
+
+		}
+
+		.file-list,
+		.ds-referenceSet-list {
+			@extend .panel;
+			@extend .panel-default;
+			@extend .panel-body;
+		}
+
+		.file-list {
+			.simple-item-view-abstract {
+				@extend p;
+			}
+
+			.thumbnail-wrapper {
+				@extend .pull-right;
+			}
+
+			.file-link {
+				a {
+					&:before {
+						@extend .fa;
+						margin-right: 8px;
+					}
+
+					&.open {
+						@extend .fa-external-link;
+					}
+
+					&.download {
+						@extend .fa-download;
+					}
+				}
+			}
+		}
+
+		.ds-referenceSet-list {
+			li {
+				margin: 0 0 0 22px;
+			}
+		}
+	}
+
+	.ds-static-div {
+		.pagination {
+			width: 100%;
+
+			.pagination-info {
+				@extend .pull-left;
+			}
+
+			.pagination-links {
+				@extend .pull-right;
+			}
+		}
+	}
+
+	.ds-includeSet-table {
+		@extend .table;
+		@extend .panel;
+	}
+}
