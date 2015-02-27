@@ -50,6 +50,13 @@
 	@include make-md-column(9);
 	@include make-sm-column(9);
 	@include make-xs-column(9);
+
+	&.main-content {
+		@include make-lg-column(9);
+		@include make-md-column(9);
+		@include make-sm-column(9);
+		@include make-xs-column(12);
+	}
 }
 
 .grid_8 {

@@ -43,9 +43,12 @@ body {
 }
 
 .header {
-	.logo,
 	.teaser-head {
 		@extend .hidden-xs;
+	}
+
+	.logo {
+		@include make-xs-column(6);
 	}
 }
 
