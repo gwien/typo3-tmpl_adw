@@ -517,7 +517,9 @@ var addBordersToMap = function() {
 
 	var statesData;
 	var setDynamicStyle = function(layer, zoom) {
-		layer.setStyle({weight: getWeight(zoom), opacity: getOpacity(zoom)});
+		if (typeof(layer) != "undefined") {
+			layer.setStyle({weight: getWeight(zoom), opacity: getOpacity(zoom)});
+		}
 	};
 
 	var getWeight = function(z) {
